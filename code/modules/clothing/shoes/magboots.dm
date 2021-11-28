@@ -132,7 +132,7 @@
 
 /obj/item/clothing/shoes/magboots/boomboots/Initialize()
 	. = ..()
-	AddComponent(/datum/component/squeak, list('monkestation/sound/misc/Explosion1.ogg'=1,'monkestation/sound/misc/Explosion2.ogg'=1, 'sound/effects/clownstep2.ogg' =1, 'sound/effects/clownstep1.ogg' =1), 50)
+	AddComponent(/datum/component/squeak, list('monkestation/sound/misc/Boomboot1.ogg'=1), 50)
 
 /obj/item/clothing/shoes/magboots/boomboots/equipped(mob/user, slot)
 	. = ..()
@@ -141,14 +141,6 @@
 			waddle = user.AddComponent(/datum/component/waddling)
 		if(user.mind && user.mind.assigned_role == "Clown")
 			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "clownshoes", /datum/mood_event/clownshoes)
-
-/obj/item/clothing/shoes/magboots/boomboots/MouseDrop(atom/over_object)
-	if(usr)
-		var/mob/living/carbon/C = usr
-		if(src == C.shoes && magpulse)
-			to_chat(C, "<span class='userdanger'>It would be unwise to remove these while activated!</span>")
-			return
-	..()
 
 /obj/item/clothing/shoes/magboots/boomboots/attack_hand(mob/user)
 	if(iscarbon(user))

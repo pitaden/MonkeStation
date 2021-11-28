@@ -2369,7 +2369,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/storage/box/syndie_kit/imp_deathrattle
 	cost = 4
 	surplus = 0
-	include_modes = list(/datum/game_mode/nuclear)
+	purchasable_from = UPLINK_NUKE_OPS
 
 
 ////////////////
