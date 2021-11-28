@@ -132,7 +132,7 @@
 
 /obj/item/clothing/shoes/magboots/boomboots/Initialize()
 	. = ..()
-	AddComponent(/datum/component/squeak, list('monkestation/sound/misc/boomboot1.ogg'=1,'monkestation/sound/misc/boomboot2.ogg'=1), 50)
+	AddComponent(/datum/component/squeak, list('monkestation/sound/misc/Explosion1.ogg'=1,'monkestation/sound/misc/Explosion2.ogg'=1, 'sound/effects/clownstep2.ogg' =1, 'sound/effects/clownstep1.ogg' =1), 50)
 
 /obj/item/clothing/shoes/magboots/boomboots/equipped(mob/user, slot)
 	. = ..()
