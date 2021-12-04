@@ -3453,6 +3453,7 @@
 #include "monkestation\code\datums\diseases\advance\symptoms\rodman.dm"
 #include "monkestation\code\datums\traits\negative.dm"
 #include "monkestation\code\game\area\Space_Station_13_areas.dm"
+#include "monkestation\code\game\objects\structures\signs\_signs.dm"
 #include "monkestation\code\modules\clothing\head\misc_special.dm"
 #include "monkestation\code\modules\clothing\masks\miscellaneous.dm"
 #include "monkestation\code\modules\clothing\suits\labcoat.dm"
