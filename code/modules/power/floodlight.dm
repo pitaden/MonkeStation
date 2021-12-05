@@ -79,8 +79,13 @@
 			setting_text = "standard lighting"
 		if(4)
 			setting_text = "high power"
+			//MonkeStation Edit Start
+			//Moths are flung at lamps
+			Grab_Moths(get_turf(src))
 	if(user)
 		to_chat(user, "You set [src] to [setting_text].")
+		user.changeNext_move(CLICK_CD_MELEE)
+			//MonkeStation Edit End
 
 /obj/machinery/power/floodlight/attackby(obj/item/O, mob/user, params)
 	if(O.tool_behaviour == TOOL_WRENCH)
