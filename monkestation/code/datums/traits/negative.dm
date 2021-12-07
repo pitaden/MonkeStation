@@ -19,7 +19,7 @@
 /datum/quirk/stowaway
 	name = "Stowaway"
 	desc = "You're a station stowaway with no ID card that wakes up inside a random locker, who knows where you'll end up?"
-	value = -2 //More powerful than Jailbird, this WILL cause you issues throughout a round.
+	value = -2
 
 /datum/quirk/stowaway/on_spawn()
 	. = ..()
@@ -29,7 +29,7 @@
 	qdel(trashed)
 	if(prob(20))
 		H.drunkenness = 50 //What did I DO last night?
-	var/obj/structure/closet/selected_closet = get_untouched_unlocked_closed_locker() //Find your new home
+	var/obj/structure/closet/selected_closet = get_unlocked_closed_locker() //Find your new home
 	if(selected_closet)
 		H.forceMove(selected_closet) //Move in
 
