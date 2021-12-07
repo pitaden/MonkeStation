@@ -275,25 +275,21 @@
 	dissolvable = FALSE
 
 	//MonkeStation Edit Start
-	//Randomized Floorpill Names
+	//Randomized Floorpill Names/colors
 /obj/item/reagent_containers/pill/floorpill/Initialize()
-	. = ..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/item/reagent_containers/pill/floorpill/LateInitialize()
 	list_reagents = list(get_unrestricted_random_reagent_id() = rand(10,50))
 	. = ..()
 	add_atom_colour(rgb(rand(255),rand(255),rand(255)), FIXED_COLOUR_PRIORITY)
-	var/prefix_word = pick(world.file2list("monkestation/strings/random_drug_names.txt"))
+	var/drug_word = pick(GLOB.random_drug_names)
 	if(prob(10))
-		prefix_word = "[pick("The", "All-Natural", "Kilgor's Favorite", "Tasty", "New & Improved", "Radical", "Double", "Triple", "Quad")] [prefix_word]"
+		drug_word = "[pick("The", "All-Natural", "Kilgor's Favorite", "Tasty", "New & Improved", "Radical", "Double", "Triple", "Quad")] [drug_word]"
 	if(prob(25))
-		prefix_word = "[prefix_word]'s"
-	var/suffix_word = pick(world.file2list("monkestation/strings/random_drug_names.txt"))
-	if(!prefix_word || !suffix_word)
+		drug_word = "[drug_word]'s"
+	drug_word = "[drug_word] [pick(GLOB.random_drug_names)]"
+	if(!drug_word)
 		name = "Floorpill"
 		return
-	name = "[prefix_word] [suffix_word]"
+	name = "[drug_word]"
 	//MonkeStation Edit end
 
 /obj/item/reagent_containers/pill/floorpill/examine(mob/user)
