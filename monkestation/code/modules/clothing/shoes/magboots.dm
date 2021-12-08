@@ -65,5 +65,7 @@
 
 /obj/item/clothing/shoes/magboots/boomboots/on_mob_death(mob/user, gibbed)
 	. = ..()
-	if(magpulse)//only want them exploding if they're on
-		explosion(src,2,4,8,6)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(magpulse && src == C.shoes)//only want them exploding if they're on & Equipped
+			explosion(src,2,4,8,6)
