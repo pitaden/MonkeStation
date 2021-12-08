@@ -1,4 +1,4 @@
-//Used to get a random untouched locker, created for the Stowaway trait
+//Used to get a random closed and non-secure locker on the station z-level, created for the Stowaway trait.
 /proc/get_unlocked_closed_locker() //I've seen worse proc names
 	var/list/picked_lockers = list()
 	var/turf/object_location
