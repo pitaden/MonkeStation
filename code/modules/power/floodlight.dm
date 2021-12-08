@@ -79,13 +79,10 @@
 			setting_text = "standard lighting"
 		if(4)
 			setting_text = "high power"
-			//MonkeStation Edit Start
-			//Moths are flung at lamps
-			Grab_Moths(get_turf(src))
+			Grab_Moths(get_turf(src))			//MonkeStation Edit: Moths are flung at lamps
 	if(user)
 		to_chat(user, "You set [src] to [setting_text].")
-		user.changeNext_move(CLICK_CD_MELEE)
-			//MonkeStation Edit End
+		user.changeNext_move(CLICK_CD_MELEE) 	//MonkeStation Edit: Adds cooldown to floodlight mode changes.
 
 /obj/machinery/power/floodlight/attackby(obj/item/O, mob/user, params)
 	if(O.tool_behaviour == TOOL_WRENCH)
