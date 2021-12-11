@@ -48,12 +48,12 @@
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		if(src == C.shoes)
-			magpulse = !magpulse
 			if(magpulse)
 				clothing_flags &= ~NOSLIP
 				strip_delay = 100
 			else
 				clothing_flags |= NOSLIP
+			magpulse = !magpulse
 			icon_state = "[magboot_state][magpulse]"
 			to_chat(user, "<span class='notice'>You [magpulse ? "enable" : "disable"] the anti-tamper system.</span>")
 			user.update_inv_shoes()	//so our mob-overlays update
@@ -64,7 +64,6 @@
 			to_chat(user, "<span class='userdanger'>You have to wear the boots to activate them!</span>")
 
 /obj/item/clothing/shoes/magboots/boomboots/on_mob_death(mob/user, gibbed)
-	. = ..()
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		if(magpulse && src == C.shoes)//only want them exploding if they're on & Equipped
