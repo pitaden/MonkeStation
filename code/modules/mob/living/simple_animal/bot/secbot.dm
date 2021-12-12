@@ -22,7 +22,8 @@
 	path_image_color = "#FF0000"
 
 	//monkestation edit begin
-	var/arrestsounds = list('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg')
+	var/arrestsounds = "law"
+	var/chasesounds = list('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg')
 	//monkestation edit end
 
 	var/noloot = FALSE
@@ -243,14 +244,13 @@ Auto Patrol: []"},
 	C.visible_message("<span class='danger'>[src] is trying to put zipties on [C]!</span>",\
 						"<span class='userdanger'>[src] is trying to put zipties on you!</span>")
 	addtimer(CALLBACK(src, .proc/attempt_handcuff, C), 60)
-
 /mob/living/simple_animal/bot/secbot/proc/attempt_handcuff(mob/living/carbon/C)
 	if( !on || !Adjacent(C) || !isturf(C.loc) ) //if he's in a closet or not adjacent, we cancel cuffing.
 		return
 	if(!C.handcuffed)
 		C.handcuffed = new /obj/item/restraints/handcuffs/cable/zipties/used(C)
 		C.update_handcuffed()
-		playsound(src, "law", 50, 0)
+		playsound(src, arrestsounds, 50, 0)
 		back_to_idle()
 
 /mob/living/simple_animal/bot/secbot/proc/stun_attack(mob/living/carbon/C)
@@ -402,7 +402,7 @@ Auto Patrol: []"},
 			target = C
 			oldtarget_name = C.name
 			speak("Level [threatlevel] infraction alert!")
-			playsound(loc, pick(arrestsounds), 50, FALSE)
+			playsound(loc, pick(chasesounds), 50, FALSE)
 			visible_message("<b>[src]</b> points at [C.name]!")
 			mode = BOT_HUNT
 			INVOKE_ASYNC(src, .proc/handle_automated_action)
