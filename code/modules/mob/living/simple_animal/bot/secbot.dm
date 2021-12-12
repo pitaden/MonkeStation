@@ -21,6 +21,10 @@
 	data_hud_type = DATA_HUD_SECURITY_ADVANCED
 	path_image_color = "#FF0000"
 
+	//monkestation edit begin
+	var/arrestsounds = list('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg')
+	//monkestation edit end
+
 	var/noloot = FALSE
 	var/baton_type = /obj/item/melee/baton
 	var/mob/living/carbon/target
@@ -398,7 +402,7 @@ Auto Patrol: []"},
 			target = C
 			oldtarget_name = C.name
 			speak("Level [threatlevel] infraction alert!")
-			playsound(loc, pick('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg'), 50, FALSE)
+			playsound(loc, pick(arrestsounds), 50, FALSE)
 			visible_message("<b>[src]</b> points at [C.name]!")
 			mode = BOT_HUNT
 			INVOKE_ASYNC(src, .proc/handle_automated_action)
