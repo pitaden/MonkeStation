@@ -114,7 +114,7 @@
 //drill bone
 /datum/surgery_step/drill
 	name = "drill bone"
-	implements = list(TOOL_DRILL = 100, /obj/item/powertool/hand_drill = 80, /obj/item/pickaxe/drill = 60, TOOL_SCREWDRIVER = 20)
+	implements = list(TOOL_DRILL = 100, /obj/item/powertool/hand_drill = 80, /obj/item/pickaxe/drill = 60, TOOL_SCREWDRIVER = 20, /obj = 0)
 	time = 30
 
 /datum/surgery_step/drill/tool_check(mob/user, obj/item/tool)
