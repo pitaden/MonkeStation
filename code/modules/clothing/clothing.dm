@@ -313,7 +313,7 @@ BLIND     // can't see anything
 	var/static/radial_vitals = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_vitals")
 	var/static/radial_tracking = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_tracking")
 
-	var/static/list/radial_options = list("Turn off sensors" = radial_off, "Binary sensor" = radial_binary, "vitals" = radial_vitals, "tracking" = radial_tracking)
+	var/static/list/radial_options = list("Turn off sensors" = radial_off, "Show whether you are alive or dead" = radial_binary, "Show exact vitals" = radial_vitals, "Show exact vitals and location" = radial_tracking)
 	var/choice = show_radial_menu(user, src, radial_options, require_near = TRUE, tooltips = TRUE)
 	if(M.stat)
 		return
@@ -342,11 +342,12 @@ BLIND     // can't see anything
 			if("tracking")
 				sensor_mode = SENSORS_TRACKING
 				to_chat(user, "<span class='notice'>Your suit will now report your exact vital lifesigns as well as your coordinate position.</span>")
+
 	else if(istype(src.loc, /mob))
 		var/mob/living/carbon/human/wearer = src.loc
 		wearer.visible_message("<span class='notice'>[user] tries to set [wearer]'s sensors.</span>", \
-			"<span class='warning'>[user] is trying to set your sensors.</span>", null, COMBAT_MESSAGE_RANGE)
-		if(do_mob(user, wearer, SENSOR_CHANGE_DELAY))
+							"<span class='warning'>[user] is trying to set your sensors.</span>", null, COMBAT_MESSAGE_RANGE)
+		if(!do_mob(user, wearer, SENSOR_CHANGE_DELAY))
 			switch(choice)
 				if("off")
 					sensor_mode = SENSORS_OFF
@@ -362,7 +363,6 @@ BLIND     // can't see anything
 						 "<span class='notice'>[user] turns your remote sensors to track vitals.</span>", null, COMBAT_MESSAGE_RANGE)
 				if("tracking")
 					sensor_mode = SENSORS_TRACKING
-
 					wearer.visible_message("<span class='notice'>[user] turns [wearer]'s remote sensors to maximum.</span>", \
 						 "<span class='notice'>[user] turns your remote sensors to maximum.</span>", null, COMBAT_MESSAGE_RANGE)
 			log_combat(user, wearer, "changed sensors to [sensor_mode]")
