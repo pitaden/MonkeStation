@@ -29,6 +29,9 @@
 	var/cooldown = 0
 	var/envirosealed = FALSE //is it safe for plasmamen
 	//MonkeStation Edit Start
+	//Style Adjust variables
+	var/can_adjust = FALSE
+
 	//Alternative Scream/Laugh Vars
 	var/list/alternative_screams = list()
 	var/list/alternative_laughs = list()
@@ -295,6 +298,7 @@ SEE_PIXELS// if an object is located on an unlit area, but some of its pixels ar
 BLIND     // can't see anything
 */
 
+//Monkestation note: only relevant for female underwear.  Alternative clothing styles will be using
 /proc/generate_female_clothing(index,t_color,icon,type)
 	var/icon/female_clothing_icon	= icon("icon"=icon, "icon_state"=t_color)
 	var/icon/female_s				= icon("icon"='icons/mob/uniform.dmi', "icon_state"="[(type == FEMALE_UNIFORM_FULL) ? "female_full" : "female_top"]")
@@ -304,6 +308,13 @@ BLIND     // can't see anything
 
 /obj/item/clothing/under/proc/set_sensors(mob/user)
 	var/mob/M = user
+	var/static/radial_off = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_off")
+	var/static/radial_binary = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_binary")
+	var/static/radial_vitals = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_vitals")
+	var/static/radial_tracking = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_tracking")
+
+	var/static/list/radial_options = list("Turn off sensors" = radial_off, "Binary sensor" = radial_binary, "vitals" = radial_vitals, "tracking" = radial_tracking)
+	var/choice = show_radial_menu(user, src, radial_options, require_near = TRUE, tooltips = TRUE)
 	if(M.stat)
 		return
 	if(!can_use(M))
@@ -317,45 +328,44 @@ BLIND     // can't see anything
 	if(src.has_sensor <= NO_SENSORS)
 		to_chat(user, "<span class='warning'>This suit does not have any sensors.</span>")
 		return FALSE
-
-	var/list/modes = list("Off", "Binary vitals", "Exact vitals", "Tracking beacon")
-	var/switchMode = input("Select a sensor mode:", "Suit Sensor Mode", modes[sensor_mode + 1]) in modes
-	if(get_dist(user, src) > 1)
-		to_chat(user, "<span class='warning'>You have moved too far away!</span>")
-		return
-	var/sensor_selection = modes.Find(switchMode) - 1
-
 	if (src.loc == user)
-		switch(sensor_selection)
-			if(SENSORS_OFF)
+		switch(choice)
+			if("off")
+				sensor_mode = SENSORS_OFF
 				to_chat(user, "<span class='notice'>You disable your suit's remote sensing equipment.</span>")
-			if(SENSORS_BINARY)
+			if("binary")
+				sensor_mode = SENSORS_BINARY
 				to_chat(user, "<span class='notice'>Your suit will now only report whether you are alive or dead.</span>")
-			if(SENSORS_VITALS)
+			if("vitals")
+				sensor_mode = SENSORS_VITALS
 				to_chat(user, "<span class='notice'>Your suit will now only report your exact vital lifesigns.</span>")
-			if(SENSORS_TRACKING)
+			if("tracking")
+				sensor_mode = SENSORS_TRACKING
 				to_chat(user, "<span class='notice'>Your suit will now report your exact vital lifesigns as well as your coordinate position.</span>")
-		sensor_mode = sensor_selection
 	else if(istype(src.loc, /mob))
 		var/mob/living/carbon/human/wearer = src.loc
 		wearer.visible_message("<span class='notice'>[user] tries to set [wearer]'s sensors.</span>", \
-						 "<span class='warning'>[user] is trying to set your sensors.</span>", null, COMBAT_MESSAGE_RANGE)
+			"<span class='warning'>[user] is trying to set your sensors.</span>", null, COMBAT_MESSAGE_RANGE)
 		if(do_mob(user, wearer, SENSOR_CHANGE_DELAY))
-			switch(sensor_selection)
-				if(SENSORS_OFF)
+			switch(choice)
+				if("off")
+					sensor_mode = SENSORS_OFF
 					wearer.visible_message("<span class='warning'>[user] disables [wearer]'s remote sensing equipment.</span>", \
 						 "<span class='warning'>[user] disables your remote sensing equipment.</span>", null, COMBAT_MESSAGE_RANGE)
-				if(SENSORS_BINARY)
+				if("binary")
+					sensor_mode = SENSORS_BINARY
 					wearer.visible_message("<span class='notice'>[user] turns [wearer]'s remote sensors to binary.</span>", \
 						 "<span class='notice'>[user] turns your remote sensors to binary.</span>", null, COMBAT_MESSAGE_RANGE)
-				if(SENSORS_VITALS)
+				if("vitals")
+					sensor_mode = SENSORS_VITALS
 					wearer.visible_message("<span class='notice'>[user] turns [wearer]'s remote sensors to track vitals.</span>", \
 						 "<span class='notice'>[user] turns your remote sensors to track vitals.</span>", null, COMBAT_MESSAGE_RANGE)
-				if(SENSORS_TRACKING)
+				if("tracking")
+					sensor_mode = SENSORS_TRACKING
+
 					wearer.visible_message("<span class='notice'>[user] turns [wearer]'s remote sensors to maximum.</span>", \
 						 "<span class='notice'>[user] turns your remote sensors to maximum.</span>", null, COMBAT_MESSAGE_RANGE)
-			sensor_mode = sensor_selection
-			log_combat(user, wearer, "changed sensors to [switchMode]")
+			log_combat(user, wearer, "changed sensors to [sensor_mode]")
 	if(ishuman(loc))
 		var/mob/living/carbon/human/H = loc
 		if(H.w_uniform == src)
@@ -383,6 +393,8 @@ BLIND     // can't see anything
 			rolldown()
 
 /obj/item/clothing/under/verb/jumpsuit_adjust()
+
+
 	set name = "Adjust Jumpsuit Style"
 	set category = null
 	set src in usr
