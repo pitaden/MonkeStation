@@ -402,9 +402,6 @@ BLIND     // can't see anything
 		else
 			rolldown()
 
-
-
-
 /obj/item/clothing/under/verb/jumpsuit_adjust()
 
 
