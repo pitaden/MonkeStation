@@ -23,7 +23,8 @@
 
 /datum/surgery_step/lobotomize
 	name = "perform lobotomy"
-	implements = list(TOOL_SCALPEL = 63, /obj/item/melee/transforming/energy/sword = 47, /obj/item/kitchen/knife = 47,
+	//MonkeStation Edit: Tool chances and choices modified.
+	implements = list(TOOL_SCALPEL = 63, /obj/item/melee/transforming/energy/sword = 47, /obj/item/kitchen/knife = 47, /obj/item/toy/cards/singlecard = 32,
 		/obj/item/shard = 32, /obj/item = 16)
 	time = 100
 

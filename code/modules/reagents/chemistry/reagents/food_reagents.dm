@@ -553,6 +553,7 @@
 	random_unrestricted = TRUE
 
 /datum/reagent/consumable/honey/on_mob_life(mob/living/carbon/M)
+	//MonkeStation Edit: Surgery effects moved to surgery_step.dm
 	if(power == 0)
 		M.reagents.add_reagent(/datum/reagent/consumable/sugar,3)
 	if(prob(55))

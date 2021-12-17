@@ -157,6 +157,7 @@
 	random_unrestricted = TRUE
 
 /datum/reagent/consumable/laughter/on_mob_life(mob/living/carbon/M)
+	//MonkeStation Edit: Laughter lasts longer in the body.
 	if(prob(25))
 		M.emote("laugh")
 	SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "chemical_laughter", /datum/mood_event/chemical_laughter)

@@ -97,8 +97,8 @@
 
 	speed_mod /= get_speed_modifier(user, target) * (1 + surgery.speed_modifier)
 
-	var/modded_time = time * speed_mod * max((1 - sterilization_check(target)), 0.25) * clothing_check(user)
-	//Speed = Base time * Tool Speed * Between 1 to 0.25 sterilization * Between 1 to 0.40 clothing
+	var/modded_time = time * speed_mod * (1 - sterilization_check(target)) * clothing_check(user)
+	//Speed = Base time * Tool Speed * Between 1 to 0.60 sterilization * Between 1 to 0.40 clothing
 	success_prob = (implements[implement_type] * ( 1 +sterilization_check(target)))
 	//Success Chance = implement chance per surgery * 1 to 1.6 sterilization
 	//Full sterilization odds of success: 63% = 100%, 47% = 75%, 32% = 50%, 16% = 25%
@@ -138,11 +138,13 @@
 	var/screwedmessage = ""
 	switch(success_prob)
 		if(75 to 99)
-			screwedmessage = " You almost had it, though."
-		if(50 to 74)//25 to 49 = no extra text
-			screwedmessage = " This is hard to get right in these conditions..."
+			screwedmessage = pick(" You almost had it, though.", " Just got to keep trying...", " So close...")
+		if(50 to 74)
+			screwedmessage = pick(" This is hard to get right in these conditions...", " Maybe I need more sterilizer...")
+		if(25 to 49)
+			screwedmessage = pick(" This is practically impossible in these conditions...", " I'm going to need better tools...", " Did I sterilize the patient?")
 		if(0 to 24)
-			screwedmessage = " This is practically impossible in these conditions..."
+			screwedmessage = pick(" This probably isn't going to work...", " Am I qualified for this?", " I'd better check my tools...", " Did I sterilize the patient?")
 
 	display_results(user, target, "<span class='warning'>You screw up![screwedmessage]</span>",
 		"<span class='warning'>[user] screws up!</span>",
@@ -209,7 +211,7 @@
 					sterile_multiplier += 0.3
 	if(sterile_multiplier >= 0.6)
 		sterile_multiplier = 0.6
-	return sterile_multiplier //Max of 75% bonus from this
+	return sterile_multiplier //Max of 60% bonus from this for success, max 40% for speed
 
 /datum/surgery_step/proc/chem_check(mob/living/carbon/target)
 	if(!LAZYLEN(chems_needed))

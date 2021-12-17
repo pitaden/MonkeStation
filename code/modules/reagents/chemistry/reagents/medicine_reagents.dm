@@ -379,6 +379,7 @@
 	return TRUE
 
 /datum/reagent/medicine/mine_salve/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+	//MonkeStation Edit: Surgery effects moved to surgery_step.dm
 	if(iscarbon(M) && M.stat != DEAD)
 		if(method in list(INGEST, VAPOR, INJECT))
 			M.adjust_nutrition(-5)

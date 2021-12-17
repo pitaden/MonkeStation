@@ -20,6 +20,7 @@
 
 /datum/surgery_step/pacify
 	name = "rewire brain"
+	//MonkeStation Edit: Tool chances and choices modified.
 	implements = list(TOOL_HEMOSTAT = 70, TOOL_SCREWDRIVER = 47, /obj/item/pen = 16)
 	time = 40
 

@@ -9,7 +9,8 @@
 
 /datum/surgery_step/sever_limb
 	name = "sever limb"
-	implements = list(TOOL_SCALPEL = 100, TOOL_SAW = 100, /obj/item/melee/arm_blade = 65, /obj/item/fireaxe = 47, /obj/item/hatchet = 47, /obj/item/kitchen/knife/butcher = 47)
+	//MonkeStation Edit: Tool chances and choices modified.
+	implements = list(TOOL_SCALPEL = 100, TOOL_SAW = 100, /obj/item/melee/arm_blade = 65, /obj/item/fireaxe = 47, /obj/item/hatchet = 47, /obj/item/kitchen/knife/butcher = 47, /obj/item/toy/cards/singlecard = 32)
 	time = 64
 
 /datum/surgery_step/sever_limb/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)

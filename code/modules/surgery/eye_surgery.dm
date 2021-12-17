@@ -8,6 +8,7 @@
 //fix eyes
 /datum/surgery_step/fix_eyes
 	name = "fix eyes"
+	//MonkeStation Edit: Tool chances and choices modified.
 	implements = list(TOOL_HEMOSTAT = 63, TOOL_SCREWDRIVER = 47, /obj/item/pen = 16)
 	time = 64
 

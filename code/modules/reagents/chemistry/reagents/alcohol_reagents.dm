@@ -68,7 +68,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/reaction_mob(mob/living/M, method=TOUCH, reac_volume)//Splashing people with ethanol isn't quite as good as fuel.
 	if(!isliving(M))
 		return
-
+	//MonkeStation Edit: Surgery effects moved to surgery_step.dm
 	if(method in list(TOUCH, VAPOR, PATCH))
 		M.adjust_fire_stacks(reac_volume / 15)
 	return ..()

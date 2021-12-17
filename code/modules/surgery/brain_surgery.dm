@@ -14,6 +14,7 @@
 
 /datum/surgery_step/fix_brain
 	name = "fix brain"
+	//MonkeStation Edit: Tool chances and choices modified.
 	implements = list(TOOL_HEMOSTAT = 65, TOOL_SCREWDRIVER = 47, /obj/item/pen = 35) //don't worry, pouring some alcohol on their open brain will get that chance to 100
 	time = 120 //long and complicated
 

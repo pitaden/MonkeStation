@@ -941,9 +941,7 @@
 	description = "Sterilizes wounds in preparation for surgery."
 	color = "#C8A5DC" // rgb: 200, 165, 220
 	taste_description = "bitterness"
-
-/datum/reagent/space_cleaner/sterilizine/reaction_mob(mob/living/M, method, reac_volume)
-	..()
+	//MonkeStation Edit: Surgery effects moved to surgery_step.dm
 
 
 /datum/reagent/iron

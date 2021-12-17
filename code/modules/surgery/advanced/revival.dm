@@ -27,6 +27,7 @@
 
 /datum/surgery_step/revive
 	name = "shock body"
+	//MonkeStation Edit: Tool chances and choices modified.
 	implements = list(/obj/item/shockpaddles = 100, /obj/item/melee/baton = 63, /obj/item/gun/energy = 63)
 	repeatable = TRUE
 	time = 120

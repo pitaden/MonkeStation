@@ -224,7 +224,7 @@
 
 /obj/item/clothing/gloves/color/latex/nitrile
 	name = "nitrile gloves"
-	desc = "Pricy sterile gloves that are stronger than latex. Transfers advanced surgical knowledge into the user via nanochips."
+	desc = "Pricy sterile gloves that are stronger than latex. Transfers advanced surgical knowledge into the user via nanochips." //MonkeStation Edit
 	icon_state = "nitrile"
 	item_state = "nitrilegloves"
 	item_color = "cmo"

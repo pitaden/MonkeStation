@@ -15,8 +15,9 @@
 //an incision but with greater bleed, and a 90% base success chance
 /datum/surgery_step/incise_heart
 	name = "incise heart"
+	//MonkeStation Edit: Tool chances and choices modified.
 	implements = list(TOOL_SCALPEL = 63, /obj/item/melee/transforming/energy/sword = 47, /obj/item/kitchen/knife = 47,
-		/obj/item/shard = 32)
+		/obj/item/shard = 32, /obj/item/toy/cards/singlecard = 32)
 	time = 16
 
 /datum/surgery_step/incise_heart/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -48,6 +49,7 @@
 //grafts a coronary bypass onto the individual's heart, success chance is 90% base again
 /datum/surgery_step/coronary_bypass
 	name = "graft coronary bypass"
+	//MonkeStation Edit: Tool chances and choices modified.
 	implements = list(TOOL_HEMOSTAT = 65, TOOL_WIRECUTTER = 47, /obj/item/stack/packageWrap = 47, /obj/item/stack/cable_coil = 35)
 	time = 90
 
