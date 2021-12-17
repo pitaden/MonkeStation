@@ -92,15 +92,16 @@
 
 	if(tool)
 		speed_mod = tool.toolspeed
+		if(!speed_mod)
+			speed_mod = 1
 
-	var/implement_speed_mod = 1
-	if(implement_type)//this means it isn't a require hand or any item step.
-		implement_speed_mod = implements[implement_type] / 100.0
-	speed_mod /= (get_speed_modifier(user, target) * (1 + surgery.speed_modifier) * implement_speed_mod)
+	speed_mod /= get_speed_modifier(user, target) * (1 + surgery.speed_modifier)
 
-	var/modded_time = time * speed_mod * max((1 - sterilization_check(target)), 0.1)
+	var/modded_time = time * speed_mod * max((1 - sterilization_check(target)), 0.25) * clothing_check(user)
+	//Speed = Base time * Tool Speed * Between 1 to 0.25 sterilization * Between 1 to 0.40 clothing
 	success_prob = (implements[implement_type] * ( 1 +sterilization_check(target)))
-	//modded_time = min(modded_time, time * 2) 	//EXPERIMENTAL CHANGE: UNCAPPED SPEED
+	//Success Chance = implement chance per surgery * 1 to 1.6 sterilization
+	//Full sterilization odds of success: 63% = 100%, 47% = 75%, 32% = 50%, 16% = 25%
 
 	if(iscyborg(user))//any immunities to surgery slowdown should go in this check.
 		modded_time = time
@@ -151,29 +152,64 @@
 /datum/surgery_step/proc/tool_check(mob/user, obj/item/tool)
 	return TRUE
 
-/datum/surgery_step/proc/sterilization_check(mob/living/target)
+/datum/surgery_step/proc/clothing_check(mob/living/user) 		//Checks if the SURGEON is wearing proper attire
+	if(!ishuman(user))
+		return 1 //I'm gonna just catch any weird cases of non-humans doing surgery right here
+
+	var/mob/living/carbon/human/surgeon = user
+	var/clothing_multiplier = 1
+	var/list/surgery_clothes = list(	/obj/item/clothing/suit/apron,
+										/obj/item/clothing/gloves/color/latex,
+										/obj/item/clothing/mask/surgical,
+										/obj/item/clothing/head/nursehat,
+										/obj/item/clothing/head/beret/cmo,
+										/obj/item/clothing/head/beret/med,
+										/obj/item/clothing/neck/stethoscope,
+										/obj/item/clothing/head/helmet/space/plasmaman/medical,
+										/obj/item/clothing/head/helmet/space/plasmaman/cmo,
+										/obj/item/clothing/suit/toggle/labcoat,
+										/obj/item/clothing/mask/breath,
+										/obj/item/clothing/suit/hooded/techpriest,
+										/obj/item/clothing/suit/bio_suit/plaguedoctorsuit,
+										/obj/item/clothing/mask/gas/plaguedoctor,
+										/obj/item/clothing/head/plaguedoctorhat,
+										/obj/item/clothing/under/suit/sl,
+										/obj/item/clothing/glasses/hud/health
+										)
+
+	for(var/obj/item/I in surgeon.get_equipped_items(FALSE))
+		if(locate(I) in surgery_clothes)
+			clothing_multiplier -= 0.15
+	if(clothing_multiplier < 0.40) //Max of 60% bonus from clothing.
+		clothing_multiplier = 0.40
+	return clothing_multiplier
+
+
+/datum/surgery_step/proc/sterilization_check(mob/living/target) //Checks if the victim/patient has any reagents in them that will increase surgery speed
 	var/list/sterilization_chems = list(	/datum/reagent/space_cleaner/sterilizine,
 											/datum/reagent/consumable/honey,
 											/datum/reagent/medicine/mine_salve,
 											/datum/reagent/consumable/laughter,
 											/datum/reagent/consumable/ethanol
 										)
-	var/bonus_multiplier = 0
+	var/sterile_multiplier = 0
 
 	for(var/i = 1, i < sterilization_chems.len, i++)
 		if(target.reagents.has_reagent(sterilization_chems[i]))
 			switch(sterilization_chems[i])
 				if(/datum/reagent/space_cleaner/sterilizine)
-					bonus_multiplier += 0.4
+					sterile_multiplier += 0.5
 				if(/datum/reagent/consumable/honey)
-					bonus_multiplier += 0.5
+					sterile_multiplier += 0.6
 				if(/datum/reagent/medicine/mine_salve)
-					bonus_multiplier += 0.2
+					sterile_multiplier += 0.3
 				if(/datum/reagent/consumable/laughter) //Truly the best medicine.
-					bonus_multiplier += 0.3
+					sterile_multiplier += 0.3
 				if(/datum/reagent/consumable/ethanol)
-					bonus_multiplier += 0.3
-	return bonus_multiplier
+					sterile_multiplier += 0.3
+	if(sterile_multiplier >= 0.6)
+		sterile_multiplier = 0.6
+	return sterile_multiplier //Max of 75% bonus from this
 
 /datum/surgery_step/proc/chem_check(mob/living/carbon/target)
 	if(!LAZYLEN(chems_needed))

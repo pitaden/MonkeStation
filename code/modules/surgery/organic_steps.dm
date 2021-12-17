@@ -2,8 +2,8 @@
 //make incision
 /datum/surgery_step/incise
 	name = "make incision"
-	implements = list(TOOL_SCALPEL = 100, /obj/item/melee/transforming/energy/sword = 75, /obj/item/kitchen/knife = 65,
-		/obj/item/shard = 45, /obj/item = 30) // 30% success with any sharp item.
+	implements = list(TOOL_SCALPEL = 63, /obj/item/melee/transforming/energy/sword = 47, /obj/item/kitchen/knife = 47,
+		/obj/item/shard = 32, /obj/item = 16) // 30% success with any sharp item.
 	time = 16
 
 /datum/surgery_step/incise/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -40,7 +40,7 @@
 //clamp bleeders
 /datum/surgery_step/clamp_bleeders
 	name = "clamp bleeders"
-	implements = list(TOOL_HEMOSTAT = 100, TOOL_WIRECUTTER = 60, /obj/item/stack/packageWrap = 35, /obj/item/stack/cable_coil = 15)
+	implements = list(TOOL_HEMOSTAT = 63, TOOL_WIRECUTTER = 47, /obj/item/stack/packageWrap = 32, /obj/item/stack/cable_coil = 32)
 	time = 24
 
 /datum/surgery_step/clamp_bleeders/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -57,7 +57,7 @@
 //retract skin
 /datum/surgery_step/retract_skin
 	name = "retract skin"
-	implements = list(TOOL_RETRACTOR = 100, TOOL_SCREWDRIVER = 45, TOOL_WIRECUTTER = 35)
+	implements = list(TOOL_RETRACTOR = 63, TOOL_SCREWDRIVER = 47, TOOL_WIRECUTTER = 47)
 	time = 24
 
 /datum/surgery_step/retract_skin/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -70,8 +70,8 @@
 //close incision
 /datum/surgery_step/close
 	name = "mend incision"
-	implements = list(TOOL_CAUTERY = 100, /obj/item/gun/energy/laser = 90, TOOL_WELDER = 70,
-		/obj/item = 30) // 30% success with any hot item.
+	implements = list(TOOL_CAUTERY = 63, /obj/item/nullrod/godhand = 63, /obj/item/gun/energy/laser = 63, TOOL_WELDER = 63,
+		/obj/item = 32) // 32% success with any hot item.
 	time = 24
 
 /datum/surgery_step/close/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -95,8 +95,8 @@
 //saw bone
 /datum/surgery_step/saw
 	name = "saw bone"
-	implements = list(TOOL_SAW = 100,/obj/item/melee/arm_blade = 75,
-	/obj/item/fireaxe = 50, /obj/item/hatchet = 35, /obj/item/kitchen/knife/butcher = 25)
+	implements = list(TOOL_SAW = 63,/obj/item/melee/arm_blade = 47,
+	/obj/item/fireaxe = 47, /obj/item/hatchet = 47, /obj/item/kitchen/knife/butcher = 47)
 	time = 54
 
 /datum/surgery_step/saw/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
@@ -114,7 +114,7 @@
 //drill bone
 /datum/surgery_step/drill
 	name = "drill bone"
-	implements = list(TOOL_DRILL = 100, /obj/item/powertool/hand_drill = 80, /obj/item/pickaxe/drill = 60, TOOL_SCREWDRIVER = 20, /obj = 0)
+	implements = list(TOOL_DRILL = 90, /obj/item/powertool/hand_drill = 80, /obj/item/pickaxe/drill = 60, TOOL_SCREWDRIVER = 32)
 	time = 30
 
 /datum/surgery_step/drill/tool_check(mob/user, obj/item/tool)
