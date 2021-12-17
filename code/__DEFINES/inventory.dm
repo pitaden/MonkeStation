@@ -88,8 +88,7 @@
 #define ALT_STYLE			1
 #define DIGITIGRADE_STYLE 	2
 //monkestation start
-#define SKIRT_STYLE			3
-#define ALT_SKIRT_STYLE		4
+#define ALT_SKIRT_STYLE		3
 //monkestation end
 
 //flags for outfits that have mutantrace variants (try not to use this): Currently only needed if you're trying to add tight fitting bootyshorts
