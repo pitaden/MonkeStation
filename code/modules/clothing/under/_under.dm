@@ -159,6 +159,8 @@
 			. += "Alt-click on [src] to wear it normally."
 		else
 			. += "Alt-click on [src] to wear it casually."
+	if(has_sensor)
+		. += "Ctrl-click on [src] to adjust suit sensors."
 	if (has_sensor == BROKEN_SENSORS)
 		. += "Its sensors appear to be shorted out."
 	else if(has_sensor > NO_SENSORS)
