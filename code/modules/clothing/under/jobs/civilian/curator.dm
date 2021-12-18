@@ -5,6 +5,7 @@
 	item_state = "red_suit"
 	item_color = "red_suit"
 	can_adjust = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/curator/skirt
 	name = "sensible suitskirt"

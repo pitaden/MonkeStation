@@ -400,8 +400,40 @@ BLIND     // can't see anything
 		if(attached_accessory)
 			remove_accessory(user)
 		else
-			rolldown()
+			jumpsuit_style()
 
+//monkestation edit start
+/obj/item/clothing/under/proc/jumpsuit_style()
+	if(!can_use(usr))
+		return
+	if(!has_skirt)
+		to_chat(usr, "<span class='warning'>This suit has no alternate style!</span>")
+		return
+	if(adjusted == NORMAL_STYLE | ALT_STYLE)
+		adjusted = SKIRT_STYLE
+		if(fitted == FEMALE_UNIFORM_FULL)
+			fitted = FEMALE_UNIFORM_TOP
+		to_chat(usr, "<span class='notice'>You adjust the suit to skirt mode.</span>")
+	else if(adjusted == SKIRT_STYLE | ALT_SKIRT_STYLE)
+		adjusted = NORMAL_STYLE
+		if(fitted)
+			fitted = FEMALE_UNIFORM_FULL
+		to_chat(usr, "<span class='notice'>You adjust the suit to suit mode.</span>")
+	if(ishuman(usr))
+		var/mob/living/carbon/human/H = usr
+		H.update_inv_w_uniform()
+		H.update_body()
+
+
+/obj/item/clothing/under/verb/toggle_skirt()
+
+
+	set name = "Toggle Jumpskirt"
+	set category = null
+	set src in usr
+	jumpsuit_style()
+
+//monkestation edit end
 /obj/item/clothing/under/verb/jumpsuit_adjust()
 
 
@@ -414,6 +446,9 @@ BLIND     // can't see anything
 	if(!can_use(usr))
 		return
 	if(!can_adjust)
+		to_chat(usr, "<span class='warning'>You cannot wear this suit any differently!</span>")
+		return
+	if(!can_adjust_skirt)
 		to_chat(usr, "<span class='warning'>You cannot wear this suit any differently!</span>")
 		return
 	if(toggle_jumpsuit_adjust())

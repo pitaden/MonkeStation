@@ -117,8 +117,14 @@ There are several things that need to be remembered:
 
 
 		var/t_color = U.item_color
+		var/i_color = U.item_state
 		if(!t_color)
 			t_color = U.icon_state
+		//monkestation edit start
+		if(U.has_skirt  && U.adjusted == SKIRT_STYLE)
+			t_color = "[t_color]_skirt"
+			i_color = "[i_color]_skirt"
+		//monkestation edit end
 		if(U.adjusted == ALT_STYLE)
 			t_color = "[t_color]_d"
 		else if(U.adjusted == DIGITIGRADE_STYLE)

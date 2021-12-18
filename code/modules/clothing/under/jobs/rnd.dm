@@ -7,6 +7,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 10, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 35, "stamina" = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/rnd/research_director/skirt
 	name = "research director's jumpskirt"
@@ -27,6 +28,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0, "stamina" = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/rnd/research_director/alt/skirt
 	name = "research director's tan suitskirt"
@@ -47,6 +49,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 10, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0, "stamina" = 0)
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/rnd/research_director/turtleneck/skirt
 	name = "research director's turtleneck skirt"
@@ -74,6 +77,7 @@
 	item_color = "toxinswhite"
 	permeability_coefficient = 0.5
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "stamina" = 0)
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/rnd/scientist/skirt
 	name = "scientist's jumpskirt"
@@ -92,6 +96,7 @@
 	item_state = "robotics"
 	item_color = "robotics"
 	resistance_flags = NONE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/rnd/roboticist/skirt
 	name = "roboticist's jumpskirt"

@@ -72,6 +72,7 @@
 	alt_covers_chest = TRUE
 	sensor_mode = 3
 	random_sensor = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/security/warden/skirt
 	name = "warden's suitskirt"
@@ -104,6 +105,7 @@
 	alt_covers_chest = TRUE
 	sensor_mode = 3
 	random_sensor = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/security/detective/skirt
 	name = "detective's suitskirt"
@@ -122,7 +124,7 @@
 	item_state = "greydet"
 	item_color = "greydet"
 	alt_covers_chest = TRUE
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/security/detective/grey/skirt
 	name = "noir suitskirt"
 	desc = "A hard-boiled private investigator's grey suitskirt, complete with tie clip."
@@ -147,7 +149,7 @@
 	alt_covers_chest = TRUE
 	sensor_mode = 3
 	random_sensor = FALSE
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/security/head_of_security/skirt
 	name = "head of security's jumpskirt"
 	desc = "A security jumpskirt decorated for those few with the dedication to achieve the position of Head of Security."
@@ -171,7 +173,7 @@
 	icon_state = "hosalt"
 	item_state = "bl_suit"
 	item_color = "hosalt"
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/security/head_of_security/alt/skirt
 	name = "head of security's turtleneck skirt"
 	desc = "A stylish alternative to the normal head of security jumpsuit, complete with a tactical skirt."
@@ -192,6 +194,7 @@
 	icon_state = "brig_phys"
 	item_state = "labcoat_sec"
 	item_color = "brig_phys"
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/brig_phys/skirt
 	name = "brig physician's jumpskirt"

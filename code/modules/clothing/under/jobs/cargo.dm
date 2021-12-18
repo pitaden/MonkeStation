@@ -4,6 +4,7 @@
 	icon_state = "qm"
 	item_state = "qm"
 	item_color = "qm"
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/cargo/qm/skirt
 	name = "quartermaster's jumpskirt"
@@ -24,7 +25,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	mutantrace_variation = MUTANTRACE_VARIATION
 	alt_covers_chest = TRUE
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/cargo/tech/skirt
 	name = "cargo technician's jumpskirt"
 	desc = "Skiiiiirts! They're comfy and easy to wear!"

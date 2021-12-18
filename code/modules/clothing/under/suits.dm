@@ -27,6 +27,7 @@
 	icon_state = "blackslacks"
 	item_state = "blackslacks"
 	item_color = "blackslacks"
+	has_skirt = TRUE
 
 /obj/item/clothing/under/suit/black/skirt
 	name = "black suitskirt"
@@ -45,6 +46,7 @@
 	item_state = "bl_suit"
 	item_color = "really_black_suit"
 	can_adjust = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/suit/black_really/skirt
 	name = "executive suitskirt"

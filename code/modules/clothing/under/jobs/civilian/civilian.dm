@@ -7,6 +7,7 @@
 	item_state = "bar_suit"
 	item_color = "barman"
 	alt_covers_chest = TRUE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/bartender/skirt
 	name = "bartender's skirt"
@@ -34,6 +35,7 @@
 	item_state = "bl_suit"
 	item_color = "chaplain"
 	can_adjust = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/chaplain/skirt
 	name = "chaplain's jumpskirt"
@@ -52,6 +54,7 @@
 	icon_state = "chef"
 	item_color = "chef"
 	alt_covers_chest = TRUE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/chef/skirt
 	name = "cook's skirt"
@@ -76,6 +79,7 @@
 	item_state = "b_suit"
 	item_color = "hop"
 	can_adjust = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/head_of_personnel/skirt
 	name = "head of personnel's jumpskirt"
@@ -94,6 +98,7 @@
 	item_state = "g_suit"
 	item_color = "teal_suit"
 	can_adjust = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt
 	name = "head of personnel's suit"
@@ -110,6 +115,7 @@
 	item_state = "g_suit"
 	item_color = "hydroponics"
 	permeability_coefficient = 0.5
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/hydroponics/skirt
 	name = "botanist's jumpskirt"
@@ -127,6 +133,7 @@
 	icon_state = "janitor"
 	item_color = "janitor"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0, "stamina" = 0)
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/janitor/skirt
 	name = "janitor's jumpskirt"
@@ -157,7 +164,7 @@
 	icon_state = "lawyer_black"
 	item_state = "lawyer_black"
 	item_color = "lawyer_black"
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/civilian/lawyer/black/skirt
 	name = "lawyer black suitskirt"
 	icon_state = "lawyer_black_skirt"
@@ -183,7 +190,7 @@
 	icon_state = "lawyer_red"
 	item_state = "lawyer_red"
 	item_color = "lawyer_red"
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/civilian/lawyer/red/skirt
 	name = "lawyer red suitskirt"
 	icon_state = "lawyer_red_skirt"
@@ -196,7 +203,7 @@
 	icon_state = "lawyer_blue"
 	item_state = "lawyer_blue"
 	item_color = "lawyer_blue"
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/civilian/lawyer/blue/skirt
 	name = "lawyer blue suitskirt"
 	icon_state = "lawyer_blue_skirt"
@@ -212,7 +219,7 @@
 	item_color = "blueslacks"
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
-
+	has_skirt = TRUE
 /obj/item/clothing/under/rank/civilian/lawyer/bluesuit/skirt
 	name = "blue suitskirt"
 	desc = "A classy suitskirt and tie."
@@ -231,7 +238,7 @@
 	fitted = NO_FEMALE_UNIFORM
 	can_adjust = TRUE
 	alt_covers_chest = TRUE
-
+	has_skirt = TRUE
 /obj/item/clothing/under/lawyer/civilian/lawyer/purpsuit/skirt
 	name = "purple suitskirt"
 	icon_state = "lawyer_purp_skirt"
@@ -239,5 +246,5 @@
 	item_color = "lawyer_purp_skirt"
 	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
-	fitted = FEMALE_UNIFORM_TOP 
+	fitted = FEMALE_UNIFORM_TOP
 

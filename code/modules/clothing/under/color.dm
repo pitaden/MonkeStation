@@ -1,6 +1,6 @@
 /obj/item/clothing/under/color
 	desc = "A standard issue colored jumpsuit. Variety is the spice of life!"
-
+	has_skirt = TRUE
 /obj/item/clothing/under/skirt/color
 	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
@@ -225,6 +225,7 @@
 	icon_state = "khakij"
 	item_state = "lb_suit"
 	item_color = "khakij"
+	has_skirt = FALSE
 
 /obj/item/clothing/under/color/khaki/buster
 	name = "buster jumpsuit"

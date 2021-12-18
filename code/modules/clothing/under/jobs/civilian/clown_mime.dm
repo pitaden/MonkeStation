@@ -5,6 +5,7 @@
 	icon_state = "mime"
 	item_state = "mime"
 	item_color = "mime"
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/civilian/mime/skirt
 	name = "mime's skirt"

@@ -6,6 +6,7 @@
 	item_color = "captain"
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
+	has_skirt = TRUE
 
 /obj/item/clothing/under/rank/captain/skirt
 	name = "captain's jumpskirt"
