@@ -24,6 +24,7 @@
 	sound_effect = list("sound/items/geiger/low1.ogg", "sound/items/geiger/low2.ogg", "sound/items/geiger/low3.ogg", "sound/items/geiger/low4.ogg")
 	fart_instability = 10
 	atmos_gas = "tritium=5;TEMP=600"
+	icon_state = "atomicass"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/organ/butt/atomic/On_Fart(mob/user)
@@ -35,7 +36,7 @@
 		user.audible_message("[user] <font color='green'>farts.</font>")
 		if(prob(fart_instability))
 			playsound(user, "sound/machines/alarm.ogg", 100, FALSE, 50, ignore_walls=TRUE)
-			minor_announce("A nuclear posterior has been detected in your area. All crew are required to exit the blast radius.", "Nanotrasen Atomics", 0)
+			minor_announce("The detonation of a nuclear posterior has been detected in your area. All crew are required to exit the blast radius.", "Nanotrasen Atomics", 0)
 			Person.Paralyze(120)
 			Person.electrocution_animation(120)
 			spawn(120)
@@ -44,7 +45,6 @@
 		else
 			playsound(user, pick(sound_effect), 50, TRUE)
 			Location.atmos_spawn_air(atmos_gas)
-			radiation_pulse(Location,500, 5, TRUE, TRUE)
 			spawn(20)
 				cooling_down = FALSE
 	//Do NOT call parent on this.
@@ -62,6 +62,7 @@
 /obj/item/organ/butt/cyber
 	name = "Flatulence Simulator"
 	desc = "Designed from the ground up to create advanced humor."
+	icon_state = "roboass"
 	sound_effect = list('sound/machines/buzz-sigh.ogg', 'sound/machines/buzz-two.ogg', 'sound/machines/terminal_error.ogg', 'sound/weapons/ring.ogg')
 	atmos_gas = "co2=0.25;TEMP=310.15"
 
@@ -71,6 +72,7 @@
 	desc = "A poor clown has been separated with their most funny organ."
 	fart_instability = 2
 	atmos_gas = "n2o=0.25;TEMP=310.15"
+	icon_state = "clownass"
 	sound_effect = list('sound/items/party_horn.ogg', 'sound/items/bikehorn.ogg')
 
 /obj/item/organ/butt/clown/ComponentInitialize()
