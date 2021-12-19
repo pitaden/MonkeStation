@@ -9,7 +9,7 @@
 	throw_speed = 1
 	force = 4
 	embedding = list("pain_mult" = 0, "jostle_pain_mult" = 0, "ignore_throwspeed_threshold" = TRUE, "embed_chance" = 20)
-	hitsound = 'monkestation/sound/effects/fart.ogg'
+	hitsound = 'sound/misc/fart1.ogg'
 	body_parts_covered = HEAD
 	slot_flags = ITEM_SLOT_HEAD
 	var/list/sound_effect  = list('sound/misc/fart1.ogg', 'monkestation/sound/effects/fart2.ogg', 'monkestation/sound/effects/fart3.ogg', 'monkestation/sound/effects/fart4.ogg')
@@ -20,7 +20,7 @@
 //ADMIN ONLY ATOMIC ASS
 /obj/item/organ/butt/atomic
 	name = "Atomic Ass"
-	desc = "A highly radioactive and dangerous posterior. Anyone with this is a walking war crime."
+	desc = "A highly radioactive and unstable posterior. Anyone with this is a walking war crime."
 	sound_effect = list("sound/items/geiger/low1.ogg", "sound/items/geiger/low2.ogg", "sound/items/geiger/low3.ogg", "sound/items/geiger/low4.ogg")
 	fart_instability = 10
 	atmos_gas = "tritium=5;TEMP=600"
@@ -89,6 +89,7 @@
 	name = "The Iron Butt"
 	desc = "A prosthetic replacement posterior."
 	icon_state = "ironass"
+	sound_effect = list('sound/machines/clockcult/integration_cog_install.ogg', 'sound/effects/clang.ogg')
 
 //SKELETAL ASS
 /obj/item/organ/butt/skeletal
@@ -105,6 +106,7 @@
 	sound_effect = list("monkestation/sound/voice/laugh/skeleton/skeleton_laugh.ogg")
 	fart_instability = 5
 	atmos_gas = "plasma=0.25;TEMP=310.15"
+	icon_state = "plasmaass"
 
 /obj/item/organ/butt/plasma/On_Fart(mob/user)
 	if(prob(15) && !cooling_down)
@@ -131,7 +133,7 @@
 	src.SpinAnimation(5, -1)
 
 /obj/effect/immovablerod/butt/Bump(atom/clong)
-	playsound(src,'monkestation/sound/effects/fart.ogg', 100, TRUE, 10, pressure_affected = FALSE)
+	playsound(src,'sound/misc/fart1.ogg', 100, TRUE, 10, pressure_affected = FALSE)
 	..()
 
 //ACTUAL FART PROC
@@ -243,3 +245,47 @@
 
 		spawn(15)
 			cooling_down = FALSE
+
+
+//Buttbot Production
+/obj/item/organ/butt/attackby(obj/item/I, mob/living/user)
+	if(istype(I, /obj/item/bodypart/l_arm/robot) || istype(I, /obj/item/bodypart/r_arm/robot))
+		var/mob/living/simple_animal/bot/buttbot/new_butt = new(get_turf(src))
+		qdel(I)
+		switch(src.type) //A BUTTBOT FOR EVERYONE!
+			if(/obj/item/organ/butt/atomic)
+				new_butt.name = "Atomic Buttbot"
+				new_butt.desc = "Science has gone too far."
+				new_butt.icon_state = "buttbot_atomic"
+			if(/obj/item/organ/butt/bluespace)
+				new_butt.name = "Bluespace Buttbot"
+				new_butt.desc = "The peak of Nanotrasen design."
+				new_butt.icon_state = "buttbot_bluespace"
+			if(/obj/item/organ/butt/clown)
+				new_butt.name = "Bananium Buttbot"
+				new_butt.desc = "Didn't you know clown asses were made out of Bananium?"
+				new_butt.icon_state = "buttbot_clown"
+				new_butt.AddComponent(/datum/component/slippery, 40)
+			if(/obj/item/organ/butt/cyber)
+				new_butt.name = "Cybernetic Buttbot"
+				new_butt.desc = "LAW ONE: BUTT"
+				new_butt.icon_state = "buttbot_cyber"
+			if(/obj/item/organ/butt/iron)
+				new_butt.name = "Iron Buttbot"
+				new_butt.desc = "We can rebutt him, we have the technology."
+				new_butt.icon_state = "buttbot_iron"
+			if(/obj/item/organ/butt/plasma)
+				new_butt.name = "Plasma Buttbot"
+				new_butt.desc = "Safer here than on it's owner."
+				new_butt.icon_state = "buttbot_plasma"
+			if(/obj/item/organ/butt/skeletal)
+				new_butt.name = "Skeletal Buttbot"
+				new_butt.desc = "Rattle Me Booty!"
+				new_butt.icon_state = "buttbot_skeleton"
+			if(/obj/item/organ/butt/xeno)
+				new_butt.name = "Xenomorph Buttbot"
+				new_butt.desc = "hiss!"
+				new_butt.icon_state = "buttbot_xeno"
+
+		playsound(src, pick('sound/misc/fart1.ogg', 'monkestation/sound/effects/fart2.ogg', 'monkestation/sound/effects/fart3.ogg', 'monkestation/sound/effects/fart4.ogg'), 25 ,use_reverb = TRUE)
+		qdel(src)

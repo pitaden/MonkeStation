@@ -2,7 +2,7 @@
 	name = "\improper buttbot"
 	desc = "butts"
 	icon = 'monkestation/icons/obj/butts.dmi'
-	icon_state = "ass" 							//PLACEHOLDER
+	icon_state = "buttbot" 							//PLACEHOLDER
 	density = FALSE
 	anchored = FALSE
 	health = 25
@@ -18,13 +18,6 @@
 	var/butt_probability = 40
 	var/listen_probability = 20
 
-/mob/living/simple_animal/bot/buttbot/Initialize()
-	. = ..()
-	if(prob(1))
-		name = pick("buttsbot", "assbot")
-		desc = "buttsbot yes"
-		butt_probability = 75
-
 /mob/living/simple_animal/bot/buttbot/emag_act(mob/user)
 	if(!emagged)
 		visible_message("<span class='warning'>[user] swipes a card through the [src]'s crack!</span>", "<span class='notice'>You swipe a card through the [src]'s crack.</span>")
@@ -32,7 +25,7 @@
 		emagged = TRUE
 		var/turf/butt = get_turf(src)
 		butt.atmos_spawn_air("miasma=5;TEMP=310.15")
-		playsound(src, 'monkestation/sound/effects/fart.ogg', 100 ,use_reverb = TRUE)
+		playsound(src, pick('sound/misc/fart1.ogg', 'monkestation/sound/effects/fart2.ogg', 'monkestation/sound/effects/fart3.ogg', 'monkestation/sound/effects/fart4.ogg'), 100 ,use_reverb = TRUE)
 
 /mob/living/simple_animal/bot/buttbot/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, list/message_mods)
 	. = ..()
@@ -47,4 +40,4 @@
 			butt.atmos_spawn_air("miasma=5;TEMP=310.15")
 		else
 			say(jointext(split_message, " "))
-		playsound(src, 'monkestation/sound/effects/fart.ogg', 25 ,use_reverb = TRUE)
+		playsound(src, pick('sound/misc/fart1.ogg', 'monkestation/sound/effects/fart2.ogg', 'monkestation/sound/effects/fart3.ogg', 'monkestation/sound/effects/fart4.ogg'), 25 ,use_reverb = TRUE)
