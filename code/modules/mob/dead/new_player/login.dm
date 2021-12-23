@@ -22,7 +22,6 @@
 
 	sight |= SEE_TURFS
 
-	new_player_panel()
 	client.playtitlemusic()
 	if(SSticker.current_state < GAME_STATE_SETTING_UP)
 		var/tl = SSticker.GetTimeLeft()
