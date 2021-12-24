@@ -15,7 +15,7 @@
 
 /atom/movable/screen/lobby/background
 	layer = LOBBY_BACKGROUND_LAYER
-	icon = 'icons/hud/lobby/background.dmi'
+	icon = 'monkestation/icons/hud/lobby/background.dmi'
 	icon_state = "background"
 	screen_loc = "TOP,CENTER:-61"
 
@@ -24,7 +24,7 @@
 	var/enabled = TRUE
 	///Is the button currently being hovered over with the mouse?
 	var/highlighted = FALSE
-	var/icon/base_icon_state = 'icons/hud/lobby/background.dmi'
+	var/icon/base_icon_state = 'monkestation/icons/hud/lobby/background.dmi'
 
 /atom/movable/screen/lobby/button/Click(location, control, params)
 	. = ..()
@@ -64,7 +64,7 @@
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
 	screen_loc = "TOP:-70,CENTER:-54"
-	icon = 'icons/hud/lobby/character_setup.dmi'
+	icon = 'monkestation/icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup"
 	base_icon_state = "character_setup"
 
@@ -77,7 +77,7 @@
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
 	screen_loc = "TOP:-8,CENTER:-65"
-	icon = 'icons/hud/lobby/ready.dmi'
+	icon = 'monkestation/icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
 	base_icon_state = "not_ready"
 	var/ready = FALSE
@@ -111,7 +111,7 @@
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
 	screen_loc = "TOP:-13,CENTER:-58"
-	icon = 'icons/hud/lobby/join.dmi'
+	icon = 'monkestation/icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"
 	enabled = FALSE
@@ -162,7 +162,7 @@
 
 /atom/movable/screen/lobby/button/observe
 	screen_loc = "TOP:-40,CENTER:-54"
-	icon = 'icons/hud/lobby/observe.dmi'
+	icon = 'monkestation/icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
 	base_icon_state = "observe"
 	enabled = FALSE
@@ -187,30 +187,15 @@
 	set_button_status(TRUE)
 	UnregisterSignal(SSticker, COMSIG_TICKER_ENTER_PREGAME, .proc/enable_observing)
 
-
-/* This is here for a future settings menu that will come with the prefs rework, if this is not in by 2022 kill mothblocks.
-/atom/movable/screen/lobby/button/settings
-	icon = 'icons/hud/lobby/bottom_buttons.dmi'
-	icon_state = "settings"
-	base_icon_state = "settings"
-	screen_loc = "TOP:-122,CENTER:+58"
-/atom/movable/screen/lobby/button/settings/Click(location, control, params)
-	. = ..()
-	if(!.)
-		return
-	hud.mymob.client.prefs.ShowChoices(hud.mymob)
-*/
-
-
 /atom/movable/screen/lobby/button/changelog_button
-	icon = 'icons/hud/lobby/bottom_buttons.dmi'
+	icon = 'monkestation/icons/hud/lobby/changelog.dmi'
 	icon_state = "changelog"
 	base_icon_state = "changelog"
 	screen_loc ="TOP:-122,CENTER:+58"
 
 
 /atom/movable/screen/lobby/button/crew_manifest
-	icon = 'icons/hud/lobby/bottom_buttons.dmi'
+	icon = 'monkestation/icons/hud/lobby/manifest.dmi'
 	icon_state = "crew_manifest"
 	base_icon_state = "crew_manifest"
 	screen_loc = "TOP:-122,CENTER:+30"
@@ -227,7 +212,7 @@
 	usr.client?.changelog()
 
 /atom/movable/screen/lobby/button/poll
-	icon = 'icons/hud/lobby/bottom_buttons.dmi'
+	icon = 'monkestation/icons/hud/lobby/poll.dmi'
 	icon_state = "poll"
 	base_icon_state = "poll"
 	screen_loc = "TOP:-122,CENTER:+2"
@@ -237,7 +222,7 @@
 /atom/movable/screen/lobby/button/poll/update_overlays()
 	. = ..()
 	if(new_poll)
-		. += mutable_appearance('icons/hud/lobby/poll_overlay.dmi', "new_poll")
+		. += mutable_appearance('monkestation/icons/hud/lobby/poll.dmi', "new_poll")
 
 /atom/movable/screen/lobby/button/poll/Click(location, control, params)
 	. = ..()
