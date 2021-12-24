@@ -63,7 +63,7 @@
 
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
-	screen_loc = "TOP:-70,CENTER:-54"
+	screen_loc = "TOP:-87,CENTER:+100"
 	icon = 'monkestation/icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup"
 	base_icon_state = "character_setup"
@@ -76,7 +76,7 @@
 
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
-	screen_loc = "TOP:-8,CENTER:-65"
+	screen_loc = "TOP:-54,CENTER:-35"
 	icon = 'monkestation/icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
 	base_icon_state = "not_ready"
@@ -110,7 +110,7 @@
 
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
-	screen_loc = "TOP:-13,CENTER:-58"
+	screen_loc = "TOP:-54,CENTER:-35"
 	icon = 'monkestation/icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"
@@ -161,7 +161,7 @@
 	UnregisterSignal(SSticker, COMSIG_TICKER_ENTER_SETTING_UP)
 
 /atom/movable/screen/lobby/button/observe
-	screen_loc = "TOP:-40,CENTER:-54"
+	screen_loc = "TOP:-54,CENTER:+82"
 	icon = 'monkestation/icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
 	base_icon_state = "observe"
@@ -191,14 +191,14 @@
 	icon = 'monkestation/icons/hud/lobby/changelog.dmi'
 	icon_state = "changelog"
 	base_icon_state = "changelog"
-	screen_loc ="TOP:-122,CENTER:+58"
+	screen_loc ="TOP:-98,CENTER:+45"
 
 
 /atom/movable/screen/lobby/button/crew_manifest
 	icon = 'monkestation/icons/hud/lobby/manifest.dmi'
-	icon_state = "crew_manifest"
-	base_icon_state = "crew_manifest"
-	screen_loc = "TOP:-122,CENTER:+30"
+	icon_state = "manifest"
+	base_icon_state = "manifest"
+	screen_loc = "TOP:-98,CENTER:-9"
 
 /atom/movable/screen/lobby/button/crew_manifest/Click(location, control, params)
 	. = ..()
@@ -215,7 +215,7 @@
 	icon = 'monkestation/icons/hud/lobby/poll.dmi'
 	icon_state = "poll"
 	base_icon_state = "poll"
-	screen_loc = "TOP:-122,CENTER:+2"
+	screen_loc = "TOP:-98,CENTER:-40"
 
 	var/new_poll = FALSE
 
