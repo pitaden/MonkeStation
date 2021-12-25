@@ -390,8 +390,19 @@
 			if(istype(I, /obj/item/melee/baton))
 				if(!can_finish_build(I, user))
 					return
-				to_chat(user, "<span class='notice'>You complete the Securitron! Beep boop.</span>")
-				var/mob/living/simple_animal/bot/secbot/S = new(Tsec)
+				if(prob(95))//monkestation edit
+					to_chat(user, "<span class='notice'>You complete the Securitron! Beep boop.</span>")
+					var/mob/living/simple_animal/bot/secbot/S = new(Tsec)
+					S.name = created_name
+					S.baton_type = I.type
+					S.robot_arm = robot_arm
+				else
+					to_chat(user, "<span class='notice'>You complete the... Shitcuritron? Are you sure you did that right?</span>")
+					var/mob/living/simple_animal/bot/secbot/pizzky/S = new(Tsec)
+					S.name = created_name
+					S.baton_type = I.type
+					S.robot_arm = robot_arm
+					//monkestation edit end
 				S.name = created_name
 				S.baton_type = I.type
 				S.robot_arm = robot_arm
