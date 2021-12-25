@@ -1,5 +1,5 @@
 /mob/living/simple_animal/bot/secbot/pizzky
-	name = "\improper Officer Pizz'ky"
+	name = "\improper Shitcuritron"
 	desc = "he smells like garbage"
 	icon = 'monkestation/icons/mob/aibots.dmi'
 	icon_state = "secbot"
@@ -12,7 +12,15 @@
 /mob/living/simple_animal/bot/secbot/pizzky/bot_patrol()
 	. = ..()
 	if((last_grumble_speak + 1000) < world.time) //these messages should be fairly rare
-		var/list/messagevoice = list("I can't take it anymore I'm gonna beat the fucking piss out of the clown.  I'm gonna beat him within an inch of his fucking life.  I fucking hate that honking bitch." = 'monkestation/sound/voice/pizzky/mumble1.ogg',"If I had a mouth I think I'd really like apple juice boxes.  I really wish the vending machines had apple juice boxes." = 'monkestation/sound/voice/pizzky/mumble2.ogg',"Holy crap do not get hired for nanotrasen security, worst mistake I have ever made." = 'monkestation/sound/voice/pizzky/mumble3.ogg',"I swear to got these vending machines give people botulism.  I don't know how these people keep walking around." = 'monkestation/sound/voice/pizzky/mumble4.ogg')
+		var/list/messagevoice = list("I can't take it anymore I'm gonna beat the fucking piss out of the clown.\
+									  I'm gonna beat him within an inch of his fucking life.  I fucking hate that \
+									  honking bitch." = 'monkestation/sound/voice/pizzky/mumble1.ogg',
+									"If I had a mouth I think I'd really like apple juice boxes.  I really wish the \
+									vending machines had apple juice boxes." = 'monkestation/sound/voice/pizzky/mumble2.ogg',
+									"Holy crap do not get hired for nanotrasen security, worst mistake I have ever \
+									 made." = 'monkestation/sound/voice/pizzky/mumble3.ogg',
+									 "I swear to got these vending machines give people botulism.  I don't know how these \
+									 people keep walking around." = 'monkestation/sound/voice/pizzky/mumble4.ogg')
 		var/message = pick(messagevoice)
 		whisper(message)
 		playsound(src, messagevoice[message], 25, 0) //and pretty quiet

@@ -3470,22 +3470,17 @@
 #include "monkestation\code\modules\clothing\under\costume.dm"
 #include "monkestation\code\modules\hydroponics\plant_genes.dm"
 #include "monkestation\code\modules\hydroponics\grown\berries.dm"
-<<<<<<< HEAD
-#include "monkestation\code\modules\mob\living\carbon\human\human.dm"
-#include "monkestation\code\modules\mob\living\carbon\human\species_emotes.dm"
-#include "monkestation\code\modules\mob\living\simple_animal\bot\secbot.dm"
-=======
 #include "monkestation\code\modules\language\sippins.dm"
 #include "monkestation\code\modules\language\zoomercant.dm"
 #include "monkestation\code\modules\mob\living\carbon\human\human.dm"
 #include "monkestation\code\modules\mob\living\carbon\human\species_emotes.dm"
+#include "monkestation\code\modules\mob\living\simple_animal\bot\secbot.dm"
 #include "monkestation\code\modules\reagents\chemistry\reagents\drink_reagents.dm"
 #include "monkestation\code\modules\reagents\chemistry\reagents\food_reagents.dm"
 #include "monkestation\code\modules\reagents\chemistry\reagents\other_reagents.dm"
 #include "monkestation\code\modules\reagents\chemistry\reagents\toxin_reagents.dm"
 #include "monkestation\code\modules\reagents\reagent_containers\medspray.dm"
 #include "monkestation\code\modules\reagents\reagent_containers\spray.dm"
->>>>>>> origin/master
 #include "monkestation\code\modules\research\designs\biogenerator_designs.dm"
 #include "monkestation\code\modules\research\techweb\_techweb.dm"
 #include "monkestation\code\modules\uplink\uplink_items.dm"
