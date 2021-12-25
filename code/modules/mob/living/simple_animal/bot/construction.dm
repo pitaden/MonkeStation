@@ -403,9 +403,6 @@
 					S.baton_type = I.type
 					S.robot_arm = robot_arm
 					//monkestation edit end
-				S.name = created_name
-				S.baton_type = I.type
-				S.robot_arm = robot_arm
 				qdel(I)
 				qdel(src)
 			if(I.tool_behaviour == TOOL_WRENCH)
