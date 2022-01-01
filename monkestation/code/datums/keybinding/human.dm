@@ -14,6 +14,7 @@
 	name = "fart"
 	full_name = "Fart"
 	description = "GAS GAS GAS..."
+	keybind_signal = COMSIG_KB_EMOTE_QUICK_FART
 
 /datum/keybinding/emote/fart/down(client/user)
 	if(ishuman(user.mob) && user.mob.stat == CONSCIOUS)
@@ -24,6 +25,7 @@
 	name = "scream"
 	full_name = "Scream"
 	description = "AAAAAAAAaaaaaaaaaAAAAAAAAAA"
+	keybind_signal = COMSIG_KB_EMOTE_QUICK_SCREAM
 
 /datum/keybinding/emote/scream/down(client/user)
 	if(ishuman(user.mob) && user.mob.stat == CONSCIOUS)
@@ -36,6 +38,7 @@
 	name = "clap"
 	full_name = "Clap"
 	description = "BRAVO, BRAVO!"
+	keybind_signal = COMSIG_KB_EMOTE_QUICK_CLAP
 
 /datum/keybinding/emote/clap/down(client/user)
 	if(ishuman(user.mob) && user.mob.stat == CONSCIOUS)
@@ -49,6 +52,7 @@
 	name = "flip"
 	full_name = "Flip"
 	description = "Flip out"
+	keybind_signal = COMSIG_KB_EMOTE_QUICK_FLIP
 
 /datum/keybinding/emote/flip/down(client/user)
 	if(ishuman(user.mob) && user.mob.stat == CONSCIOUS)
@@ -66,6 +70,7 @@
 	name = "spin"
 	full_name = "Spin"
 	description = "Spin to win"
+	keybind_signal = COMSIG_KB_EMOTE_QUICK_SPIN
 
 /datum/keybinding/emote/spin/down(client/user)
 	if(ishuman(user.mob) && user.mob.stat == CONSCIOUS)
