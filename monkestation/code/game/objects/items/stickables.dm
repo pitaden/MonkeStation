@@ -160,6 +160,17 @@
 //"target_icon" is the .dmi icon file selected to use, very rare that it will be needed but exists for possible alternate icon files.
 //"possible_icon_states" is optional and is a list of possible states for "current_icon" that can be switched between with alt-click.
 
+//Sticker Roll Box
+/obj/item/storage/box/stickers
+	name = "Box of Sticker Rolls"
+	desc = "Full of stickers for all of your creative needs"
+
+//In the event of there ever being traitor only, or antagonistic subtypes of stickers, it's your responsibility to change this before adding them!
+/obj/item/storage/box/stickers/PopulateContents()
+	for(var/i in 1 to 7)
+		var/random_sticker_roll = pick(subtypesof(/obj/item/sticker_roll))
+		new random_sticker_roll(src)
+
 
 //Menacing Sticker
 /obj/item/stickable/menacing
@@ -207,7 +218,7 @@
 /obj/item/stickable/icon_stickers
 	name = "Icon Sticker"
 	desc = "Using bluespace technology, you can apply a number of icons to almost any surface."
-	possible_icon_states = list("Exclamation", "Ook", "Lightbulb", "Banana", "Sick", "Heart", "Sad", "Angy", "Happy", "Manic", "Bad Times")
+	possible_icon_states = list("Exclamation", "Question", "Ook", "Lightbulb", "Banana", "Sick", "Heart", "Sad", "Angy", "Happy", "Manic", "Bad Times", "Blank Line", "Blank Column")
 	current_icon = "Exclamation"
 
 //Icon sticker roll
