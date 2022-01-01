@@ -14,7 +14,7 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	var/list/quirk_blacklist = list() //A list of quirks that can not be used with each other. Format: list(quirk1,quirk2),list(quirk3,quirk4)
 
 /datum/controller/subsystem/processing/quirks/Initialize(timeofday)
-	if(!quirks.len)
+	if(!length(quirks))
 		SetupQuirks()
 	//MonkeStation Edit: Changes quirk combo blacklist for readablity
 	quirk_blacklist = list(
@@ -32,8 +32,7 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	// Sort by Positive, Negative, Neutral; and then by name
 	var/list/quirk_list = sortList(subtypesof(/datum/quirk), /proc/cmp_quirk_asc)
 
-	for(var/V in quirk_list)
-		var/datum/quirk/T = V
+	for(var/datum/quirk/T as() in quirk_list)
 		quirks[initial(T.name)] = T
 		quirk_points[initial(T.name)] = initial(T.value)
 
