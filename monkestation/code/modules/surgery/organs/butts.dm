@@ -248,8 +248,8 @@
 		spawn(15)
 			cooling_down = FALSE
 
-
-//Buttbot Production
+//Commented out for Testmerge
+/* //Buttbot Production
 /obj/item/organ/butt/attackby(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/bodypart/l_arm/robot) || istype(I, /obj/item/bodypart/r_arm/robot))
 		var/mob/living/simple_animal/bot/buttbot/new_butt = new(get_turf(src))
@@ -291,3 +291,4 @@
 
 		playsound(src, pick('sound/misc/fart1.ogg', 'monkestation/sound/effects/fart2.ogg', 'monkestation/sound/effects/fart3.ogg', 'monkestation/sound/effects/fart4.ogg'), 25 ,use_reverb = TRUE)
 		qdel(src)
+ */
