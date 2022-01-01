@@ -9,6 +9,11 @@
 	var/list/possible_icon_states									//you can have a sticker with a different sprite than what you see in your hand.
 	var/current_icon												//This also allows adminbus stickers with odd icons
 
+/obj/item/stickable/examine(mob/user)
+	. = ..()
+	if(possible_icon_states)
+		. +=  "\n[current_icon] is currently selected, <span class='notice'>Alt-click to switch the sticker selected.</span>"
+
 //Alt Click sticker selection
 /obj/item/stickable/AltClick(mob/user)
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE))
@@ -96,7 +101,7 @@
 	stick_target.overlays += stuck
 
 ////////////////////////
-//sticker roll defines//
+//Sticker Roll Defines//
 ////////////////////////
 
 //Base roll of stickers
@@ -108,6 +113,11 @@
 	icon_state = "icons"
 	var/sticker_type		//A path to the type of sticker inside
 	var/sticker_count = 25 	//Count of stickers inside the bag
+
+//Sticker Roll Examination (Count & Type)
+/obj/item/sticker_roll/examine(mob/user)
+	. = ..()
+	. += "\nThere are [sticker_count] remaining in the roll."
 
 //Taking stickers from the bag
 /obj/item/sticker_roll/attack_hand(mob/user)
@@ -154,7 +164,7 @@
 //Menacing Sticker
 /obj/item/stickable/menacing
 	name = "Menacing Sticker"
-	desc = "You feel incredibly intimidated by this sticker.\n <span class='notice'>Alt-click to switch the icon selected.</span>"
+	desc = "You feel incredibly intimidated by this sticker."
 	possible_icon_states = list("menacing","do")
 	current_icon = "menacing"
 
@@ -196,7 +206,7 @@
 //Icon Stickers
 /obj/item/stickable/icon_stickers
 	name = "Icon Sticker"
-	desc = "Using bluespace technology, you can apply a number of icons to almost any surface.\n <span class='notice'>Alt-click to switch the icon selected.</span>"
+	desc = "Using bluespace technology, you can apply a number of icons to almost any surface."
 	possible_icon_states = list("Exclamation", "Ook", "Lightbulb", "Banana", "Sick", "Heart", "Sad", "Angy", "Happy", "Manic", "Bad Times")
 	current_icon = "Exclamation"
 
@@ -208,12 +218,12 @@
 
 //Googly Eyes
 /obj/item/stickable/eyes
-	name = "Number Sticker"
-	desc = "A set of funny eyes that make anything better.\n <span class='notice'>Alt-click to switch the eye type.</span>"
+	name = "Googly Eyes"
+	desc = "A set of funny eyes that make anything better."
 	possible_icon_states = list("Eye", "Lizard Eye", "Left Anime", "Right Anime", "Angry Liz Left", "Angry Liz Right", "Angry Left", "Angry Right")
 	current_icon = "Eye"
 
-//Number sticker roll
+//Googly Eye Roll
 /obj/item/sticker_roll/eyes
 	name = "Roll of googly eyes"
 	desc = "Full of googly eyes to stick on everything you want."
@@ -223,7 +233,7 @@
 //Status Stickers
 /obj/item/stickable/status
 	name = "HUDtastic Pranking Sticker"
-	desc = "A set of anti-gravity pranking stickers from HONKtronics, makes security laugh every time!\n <span class='notice'>Alt-click to switch the sticker type.</span>"
+	desc = "A set of anti-gravity pranking stickers from HONKtronics, makes security laugh every time!"
 	target_icon = 'icons/mob/hud.dmi'
 	possible_icon_states = list("electrified","synd", "traitor", "brother","hudill4","hudwanted","heretic", "wizard", "apprentice", "hudcaptain", "hudcentcom", "hudhealth-85", "huddead", "hudclown")
 	current_icon = "electrified"
