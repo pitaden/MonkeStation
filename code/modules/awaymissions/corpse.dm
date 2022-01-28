@@ -136,6 +136,8 @@
 // Base version - place these on maps/templates.
 /obj/effect/mob_spawn/human
 	mob_type = /mob/living/carbon/human
+	icon = 'icons/effects/corpse_icons.dmi'
+	icon_state = "Assistant"
 	//Human specific stuff.
 	var/mob_species = null		//Set to make them a mutant race such as lizard or skeleton. Uses the datum typepath instead of the ID.
 	var/datum/outfit/outfit = /datum/outfit	//If this is a path, it will be instanced in Initialize()
@@ -321,17 +323,19 @@
 
 /obj/effect/mob_spawn/human/corpse/cargo_tech
 	name = "Cargo Tech"
+	icon_state = "Cargo Technician"
 	outfit = /datum/outfit/job/cargo_tech
 
 /obj/effect/mob_spawn/human/cook
 	name = "Cook"
+	icon_state = "Cook"
 	outfit = /datum/outfit/job/cook
 
 
 /obj/effect/mob_spawn/human/doctor
 	name = "Doctor"
+	icon_state = "Medical Doctor"
 	outfit = /datum/outfit/job/doctor
-
 
 /obj/effect/mob_spawn/human/doctor/alive
 	death = FALSE
@@ -354,27 +358,163 @@
 
 /obj/effect/mob_spawn/human/engineer
 	name = "Engineer"
+	icon_state = "Station Engineer"
 	outfit = /datum/outfit/job/engineer/gloved
 
 /obj/effect/mob_spawn/human/engineer/rig
 	outfit = /datum/outfit/job/engineer/gloved/rig
 
+/obj/effect/mob_spawn/human/atmos_tech
+	name = "Atmos Tech"
+	icon_state = "Atmospheric Technician"
+	outfit = /datum/outfit/job/atmos/corpse
+/datum/outfit/job/atmos/corpse
+	name = "Atmospheric Technician (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+	box = /obj/item/storage/box/engineer
+
+/obj/effect/mob_spawn/human/janitor
+	name = "Janitor"
+	icon_state = "Janitor"
+	outfit = /datum/outfit/job/janitor
+
+/obj/effect/mob_spawn/human/captain
+	name = "Captain"
+	icon_state = "Captain"
+	outfit = /datum/outfit/job/captain/corpse
+/datum/outfit/job/captain/corpse
+	name = "Captain (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+
+/obj/effect/mob_spawn/human/botanist
+	name = "Botanist"
+	icon_state = "Botanist"
+	outfit = /datum/outfit/job/botanist/corpse
+/datum/outfit/job/botanist/corpse
+	name = "Botanist (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+
+/obj/effect/mob_spawn/human/mime
+	name = "Mime"
+	icon_state = "Mime"
+	outfit = /datum/outfit/job/mime/corpse
+/datum/outfit/job/mime/corpse
+	name = "Mime (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+
+/obj/effect/mob_spawn/human/curator
+	name = "Curator"
+	icon_state = "Curator"
+	outfit = /datum/outfit/job/curator/corpse
+/datum/outfit/job/curator/corpse
+	name = "Curator (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+
+/obj/effect/mob_spawn/human/lawyer
+	name = "Lawyer"
+	icon_state = "Lawyer"
+	outfit = /datum/outfit/job/lawyer/corpse
+/datum/outfit/job/lawyer/corpse
+	name = "Lawyer (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = /obj/item/clothing/accessory/lawyers_badge
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+	l_hand = null
+	chameleon_extras = /obj/item/stamp/law
+
+/obj/effect/mob_spawn/human/chaplain
+	name = "Chaplain"
+	icon_state = "Chaplain"
+	outfit = /datum/outfit/job/chaplain/corpse
+/datum/outfit/job/chaplain/corpse
+	name = "Chaplain (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+
+/obj/effect/mob_spawn/human/ce
+	name = "Chief Engineer"
+	icon_state = "Chief Engineer"
+	outfit = /datum/outfit/job/ce/corpse
+/datum/outfit/job/ce/corpse
+	name = "Chief Engineer (corpse)"
+	name = "Chief Engineer (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+	chameleon_extras = /obj/item/stamp/ce
+	belt = /obj/item/storage/belt/utility
+
+/obj/effect/mob_spawn/human/cmo
+	name = "Chief Medical Officer"
+	icon_state = "Chief Medical Officer"
+	outfit = /datum/outfit/job/cmo/corpse
+/datum/outfit/job/cmo/corpse
+	name = "Chief Medical Officer (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
+	chameleon_extras = /obj/item/stamp/cmo
+
+/obj/effect/mob_spawn/human/chemist
+	name = "Chemist"
+	icon_state = "Chemist"
+	outfit = /datum/outfit/job/chemist/corpse
+/datum/outfit/job/chemist/corpse
+	name = "Chemist (corpse)"
+	id = null
+	l_pocket = null
+	r_pocket = null
+	ears = /obj/item/radio/headset
+	backpack_contents = list()
 /obj/effect/mob_spawn/human/clown
 	name = "Clown"
+	icon_state = "Clown"
 	outfit = /datum/outfit/job/clown
 
 /obj/effect/mob_spawn/human/scientist
 	name = "Scientist"
+	icon_state = "Scientist"
 	outfit = /datum/outfit/job/scientist
 
 /obj/effect/mob_spawn/human/miner
 	name = "Shaft Miner"
+	icon_state = "Shaft Miner"
 	outfit = /datum/outfit/job/miner
 
 /obj/effect/mob_spawn/human/miner/rig
 	outfit = /datum/outfit/job/miner/equipped/hardsuit
 
 /obj/effect/mob_spawn/human/miner/explorer
+	icon_state = "Exploration Crew"
 	outfit = /datum/outfit/job/miner/equipped
 
 
@@ -385,6 +525,7 @@
 
 /obj/effect/mob_spawn/human/bartender
 	name = "Space Bartender"
+	icon_state = "Bartender"
 	id_job = "Bartender"
 	id_access_list = list(ACCESS_BAR)
 	outfit = /datum/outfit/spacebartender
@@ -453,6 +594,7 @@
 
 /obj/effect/mob_spawn/human/bridgeofficer
 	name = "Bridge Officer"
+	icon_state = "nanotrasen"
 	id_job = "Bridge Officer"
 	id_access_list = list(ACCESS_CENT_CAPTAIN)
 	outfit = /datum/outfit/nanotrasenbridgeofficercorpse
@@ -470,6 +612,7 @@
 /obj/effect/mob_spawn/human/commander
 	name = "Commander"
 	id_job = "Commander"
+	icon_state = "nanotrasen"
 	id_access_list = list(ACCESS_CENT_CAPTAIN, ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS, ACCESS_CENT_MEDICAL, ACCESS_CENT_STORAGE)
 	outfit = /datum/outfit/nanotrasencommandercorpse
 
@@ -490,6 +633,7 @@
 /obj/effect/mob_spawn/human/nanotrasensoldier
 	name = "\improper Nanotrasen Private Security Officer"
 	id_job = "Private Security Force"
+	icon_state = "nanotrasen"
 	id_access_list = list(ACCESS_CENT_CAPTAIN, ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS, ACCESS_CENT_MEDICAL, ACCESS_CENT_STORAGE, ACCESS_SECURITY, ACCESS_MECH_SECURITY)
 	outfit = /datum/outfit/nanotrasensoldiercorpse
 
@@ -531,6 +675,7 @@
 
 /obj/effect/mob_spawn/human/skeleton
 	name = "skeletal remains"
+	icon_state = "skeleton"
 	mob_name = "skeleton"
 	mob_species = /datum/species/skeleton
 	mob_gender = NEUTER
@@ -552,6 +697,7 @@
 
 /obj/effect/mob_spawn/human/zombie
 	name = "rotting corpse"
+	icon_state = "zombie"
 	mob_name = "zombie"
 	mob_species = /datum/species/zombie
 	assignedrole = "Zombie"
@@ -567,6 +713,7 @@
 
 /obj/effect/mob_spawn/human/abductor
 	name = "abductor"
+	icon_state = "abductor"
 	mob_name = "alien"
 	mob_species = /datum/species/abductor
 	outfit = /datum/outfit/abductorcorpse

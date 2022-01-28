@@ -10,6 +10,7 @@
 
 /obj/effect/mob_spawn/human/corpse/syndicatesoldier
 	name = "Syndicate Operative"
+	icon_state = "syndicate"
 	id_job = "Operative"
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -29,6 +30,7 @@
 
 /obj/effect/mob_spawn/human/corpse/syndicatecommando
 	name = "Syndicate Commando"
+	icon_state = "syndicate_space"
 	id_job = "Operative"
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -49,6 +51,7 @@
 
 /obj/effect/mob_spawn/human/corpse/syndicatestormtrooper
 	name = "Syndicate Stormtrooper"
+	icon_state = "syndicate_stormtrooper"
 	id_job = "Operative"
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -69,12 +72,14 @@
 /obj/effect/mob_spawn/human/clown/corpse
 	roundstart = FALSE
 	instant = TRUE
+	icon_state = "Clown"
 	skin_tone = "caucasian1"
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/pirate
 	name = "Pirate"
+	icon_state = "pirate"
 	skin_tone = "caucasian1" //all pirates are white because it's easier that way
 	outfit = /datum/outfit/piratecorpse
 	hair_style = "Bald"
@@ -90,6 +95,7 @@
 
 /obj/effect/mob_spawn/human/corpse/pirate/ranged
 	name = "Pirate Gunner"
+	icon_state = "pirate_captain"
 	outfit = /datum/outfit/piratecorpse/ranged
 
 /datum/outfit/piratecorpse/ranged
@@ -100,6 +106,7 @@
 
 /obj/effect/mob_spawn/human/corpse/russian
 	name = "Russian"
+	icon_state = "russianmelee"
 	outfit = /datum/outfit/russiancorpse
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -115,6 +122,7 @@
 
 
 /obj/effect/mob_spawn/human/corpse/russian/ranged
+	icon_state = "russianranged"
 	outfit = /datum/outfit/russiancorpse/ranged
 
 /datum/outfit/russiancorpse/ranged
@@ -123,6 +131,7 @@
 
 
 /obj/effect/mob_spawn/human/corpse/russian/ranged/trooper
+	icon_state = "russianranged"
 	outfit = /datum/outfit/russiancorpse/ranged/trooper
 
 /datum/outfit/russiancorpse/ranged/trooper
@@ -138,6 +147,7 @@
 
 /obj/effect/mob_spawn/human/corpse/russian/ranged/officer
 	name = "Russian Officer"
+	icon_state = "russianofficer"
 	outfit = /datum/outfit/russiancorpse/officer
 
 /datum/outfit/russiancorpse/officer
@@ -151,6 +161,7 @@
 
 /obj/effect/mob_spawn/human/corpse/wizard
 	name = "Space Wizard Corpse"
+	icon_state = "wizard"
 	outfit = /datum/outfit/wizardcorpse
 	hair_style = "Bald"
 	facial_hair_style = "Long Beard"
@@ -166,6 +177,7 @@
 
 /obj/effect/mob_spawn/human/corpse/nanotrasensoldier
 	name = "\improper Nanotrasen Private Security Officer"
+	icon_state = "nanotrasen"
 	id_job = "Private Security Force"
 	id_access = "Security Officer"
 	outfit = /datum/outfit/nanotrasensoldiercorpse2
@@ -186,6 +198,7 @@
 
 /obj/effect/mob_spawn/human/corpse/cat_butcher
 	name = "The Cat Surgeon"
+	icon_state = "cat_butcher"
 	id_job = "Cat Surgeon"
 	id_access_list = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_MAINT)
 	hair_style = "Cut Hair"
@@ -222,6 +235,7 @@
 
 /obj/effect/mob_spawn/human/corpse/sniper
 	name = "Sniper"
+	icon_state = "sniper"
 	outfit = /datum/outfit/sniper
 	skin_tone = "caucasian1"
 	hair_style = "Bald"
@@ -244,6 +258,7 @@
 
 /obj/effect/mob_spawn/human/corpse/psychost
 	name = "Psycho"
+	icon_state = "psycho"
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 	skin_tone = "caucasian1"
@@ -256,6 +271,7 @@
 
 /obj/effect/mob_spawn/human/corpse/psychost/muzzle
 	name = "Muzzled psycho"
+	icon_state = "psychomuzzle"
 	outfit = /datum/outfit/straightmuz
 
 /datum/outfit/straightmuz
@@ -265,6 +281,7 @@
 
 /obj/effect/mob_spawn/human/corpse/psychost/trap
 	name = "Trapped psycho"
+	icon_state = "psychotrap"
 	outfit = /datum/outfit/straighttrap
 
 /datum/outfit/straighttrap
@@ -274,6 +291,7 @@
 
 /obj/effect/mob_spawn/human/corpse/heavy
 	name = "Heavy gunner"
+	icon_state = "heavy"
 	brute_damage = 300
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -293,6 +311,7 @@
 
 /obj/effect/mob_spawn/human/corpse/zombie
 	name = "zombie"
+	icon_state = "zombie"
 	mob_species = /datum/species/zombie
 	brute_damage = 100
 
@@ -310,6 +329,7 @@
 
 /obj/effect/mob_spawn/human/corpse/facboss
 	name = "Factory boss"
+	icon_state = "facboss"
 	mob_species = /datum/species/ipc
 	brute_damage = 800
 	burn_damage = 100
