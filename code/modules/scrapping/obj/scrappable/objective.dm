@@ -17,8 +17,8 @@
 	scrap = list(
 		/obj/item/stack/ore/iron/scrap = 8,
 		/obj/item/stack/ore/glass/scrap = 6,
-		/obj/item/stack/ore/gold/scrap = 2,
-		/obj/item/stack/ore/silver/scrap = 2,
+		/obj/item/stack/ore/gold/scrap = 5,
+		/obj/item/stack/ore/silver/scrap = 5,
 		/obj/item/scrap_objective/data_rack = 1
 	)
 
@@ -38,8 +38,8 @@
 	scrap = list(
 		/obj/item/stack/ore/iron/scrap = 8,
 		/obj/item/stack/ore/glass/scrap = 6,
-		/obj/item/stack/ore/gold/scrap = 2,
-		/obj/item/stack/ore/silver/scrap = 2,
+		/obj/item/stack/ore/gold/scrap = 5,
+		/obj/item/stack/ore/silver/scrap = 5,
 		/obj/item/scrap_objective/blackbox = 1
 	)
 
@@ -47,7 +47,7 @@
 	name = "Pirate Radio"
 	desc = "A highly illegal radio, playing Nanotrasen's music without a license."
 	icon = 'icons/obj/machines/dominator.dmi'
-	icon_state = "dominator_red"
+	icon_state = "dominator-red"
 
 	required_tools = list(
 		TOOL_CROWBAR = list("tier"=2, "chance"=100),
@@ -59,7 +59,7 @@
 	scrap = list(
 		/obj/item/stack/ore/iron/scrap = 8,
 		/obj/item/stack/ore/glass/scrap = 6,
-		/obj/item/stack/ore/gold/scrap = 2,
-		/obj/item/stack/ore/silver/scrap = 2,
+		/obj/item/stack/ore/gold/scrap = 5,
+		/obj/item/stack/ore/silver/scrap = 5,
 		/obj/item/scrap_objective/radio_disk = 1
 	)

@@ -1,0 +1,13 @@
+#Listing maps here will blacklist them from generating in lavaland.
+#Like the other blacklists, maps must be the full path to them
+#Ships you can blacklist can be found in _maps\scrap_shuttles
+#SPECIFYING AN INVALID MAP WILL RESULT IN RUNTIMES ON GAME START
+
+##TEST SHUTTLES
+#_maps/scrap_shuttles/debug.dmm
+
+##SPACE RUINS
+#_maps/scrap_shuttles/onehalf.dmm #(has a syndicate hardsuit in a floor safe, various first-aid kits)
+
+##REFERENCES
+#_maps/scrap_shuttles/emergency_goon.dmm

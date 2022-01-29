@@ -3,7 +3,7 @@
 
 /obj/scrappable
 	name = "Scrappable Machine"
-	desc = "This machine is broken, but you could still salvage some materials from it."
+	desc = "It may be broken, but you could still salvage some materials from it."
 	icon = 'icons/obj/stationobjs.dmi'
 	verb_say = "beeps"
 	verb_yell = "blares"
@@ -30,6 +30,7 @@
 	// 1: screwdrivered
 	// 2: required_tools is done
 	var/decon_step = 0
+	var/decon_speed = 10 // 1/10 seconds
 
 	// can be None, Radiation, Fire, Cold, Melt Item, Explosion, Immediate Explosion
 	var/failure_effect = "None"
@@ -52,7 +53,7 @@
 	else if(src.required_tools.Find(I.tool_behaviour) && src.decon_step == 1)
 		to_chat(user, "<span class='notice'>You begin using the [I] on the [src]...</span>")
 		I.play_tool_sound(src, 50)
-		if(I.use_tool(src, user, 10))
+		if(I.use_tool(src, user, decon_speed))
 			I.play_tool_sound(src, 50)
 			var/toolstats = src.required_tools[I.tool_behaviour] // separate var for readability
 
@@ -67,16 +68,17 @@
 
 	// we're almost done!
 	else if(I.tool_behaviour == TOOL_CROWBAR && src.decon_step == 2)
-		to_chat(user, "<span class='notice'>You take the [src] apart into scrap!</span>")
-		for(var/o in src.scrap)
-			if(istype(o, /obj/item/stack))
-				new o(src.loc, src.scrap[o])
-			else
-				var/i = 0
-				while(i < src.scrap[o])
-					new o(src.loc)
-					i += 1
-		qdel(src)
+		if(I.use_tool(src, user, decon_speed))
+			to_chat(user, "<span class='notice'>You take the [src] apart into scrap!</span>")
+			for(var/o in src.scrap)
+				if(istype(o, /obj/item/stack))
+					new o(src.loc, src.scrap[o])
+				else
+					var/i = 0
+					while(i < src.scrap[o])
+						new o(src.loc)
+						i += 1
+			qdel(src)
 
 /obj/scrappable/examine(mob/user)
 	. = ..()

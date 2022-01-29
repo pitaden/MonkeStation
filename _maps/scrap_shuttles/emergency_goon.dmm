@@ -1,0 +1,109 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/obj/structure/shuttle/engine/propulsion{dir = 4},/obj/structure/window/reinforced{dir = 1},/turf/open/floor/plating,/area/template_noop)
+"ac" = (/obj/structure/shuttle/engine/heater{dir = 8},/obj/structure/window/reinforced{dir = 1},/turf/open/floor/plating,/area/template_noop)
+"ad" = (/turf/closed/wall/mineral/titanium,/area/template_noop)
+"ae" = (/obj/machinery/door/airlock/titanium{name = "Emergency Shuttle Airlock"},/obj/structure/fans/tiny,/turf/open/floor/plating,/area/template_noop)
+"af" = (/obj/machinery/door/airlock/titanium{name = "Emergency Shuttle Airlock"},/obj/docking_port/mobile/emergency{dheight = 0; dir = 2; dwidth = 9; name = "NES Port"; width = 19},/obj/structure/fans/tiny,/obj/effect/decal/cleanable/blood/xtracks,/obj/effect/decal/cleanable/oil/streak{icon_state = "gib6"},/turf/open/floor/plating,/area/template_noop)
+"ag" = (/obj/machinery/vending/wallmed,/turf/closed/wall/mineral/titanium,/area/template_noop)
+"ah" = (/obj/effect/spawner/structure/window/shuttle,/obj/machinery/door/firedoor/window,/turf/open/floor/plating,/area/template_noop)
+"ai" = (/turf/open/floor/mineral/titanium,/area/template_noop)
+"aj" = (/obj/effect/decal/cleanable/blood/xtracks,/obj/effect/decal/cleanable/oil/streak{icon_state = "gib7"},/turf/open/floor/mineral/titanium,/area/template_noop)
+"ak" = (/obj/effect/decal/cleanable/glass,/obj/structure/grille/broken,/turf/open/floor/plating,/area/template_noop)
+"al" = (/obj/structure/shuttle/engine/propulsion{dir = 4},/turf/open/floor/plating,/area/template_noop)
+"am" = (/obj/structure/shuttle/engine/heater{dir = 8},/obj/structure/window/reinforced{dir = 4},/turf/open/floor/plating,/area/template_noop)
+"an" = (/obj/scrappable/sleeper{icon_state = "sleeper"; dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/white,/area/template_noop)
+"ao" = (/obj/effect/scrapping/objective_spawner/kill,/obj/effect/decal/cleanable/blood{icon_state = "trails_1"},/obj/effect/decal/cleanable/blood/gibs/up,/turf/open/floor/mineral/titanium/white,/area/template_noop)
+"ap" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/blood,/obj/effect/decal/cleanable/dirt,/obj/effect/mob_spawn/human/corpse/assistant,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aq" = (/obj/structure/chair/comfy/shuttle{dir = 4},/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"ar" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/scrapping/objective_spawner/kill,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"as" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium,/area/template_noop)
+"at" = (/obj/effect/decal/cleanable/blood/xtracks,/obj/effect/decal/cleanable/oil/streak{icon_state = "streak4"},/turf/open/floor/mineral/titanium,/area/template_noop)
+"au" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/glass,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"av" = (/turf/closed/wall/mineral/titanium/interior,/area/template_noop)
+"aw" = (/obj/structure/table,/obj/effect/spawner/lootdrop/maintenance,/turf/open/floor/mineral/titanium/white,/area/template_noop)
+"ax" = (/obj/effect/decal/cleanable/blood{icon_state = "trails_1"},/obj/effect/decal/cleanable/blood{icon_state = "floor4"},/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/white,/area/template_noop)
+"ay" = (/obj/machinery/door/airlock/public/glass{name = "Emergency Shuttle Infirmary"},/obj/machinery/door/firedoor,/turf/open/floor/mineral/titanium/white,/area/template_noop)
+"az" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/mineral/titanium,/area/template_noop)
+"aA" = (/obj/machinery/light,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium,/area/template_noop)
+"aB" = (/obj/effect/decal/cleanable/blood/xtracks,/turf/open/floor/mineral/titanium,/area/template_noop)
+"aC" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aD" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/scrapping/objective_spawner/heal,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aE" = (/obj/effect/spawner/structure/window/shuttle,/turf/open/floor/plating,/area/template_noop)
+"aF" = (/obj/structure/table/reinforced,/obj/item/storage/toolbox/emergency,/obj/structure/window/reinforced{dir = 1},/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aG" = (/obj/machinery/light/small,/obj/effect/decal/cleanable/blood/gibs/down,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/white,/area/template_noop)
+"aH" = (/obj/machinery/status_display/evac,/turf/closed/wall/mineral/titanium,/area/template_noop)
+"aI" = (/obj/effect/decal/cleanable/blood{icon_state = "xltrails_1"},/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aJ" = (/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aK" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/machinery/light{dir = 4},/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aL" = (/obj/structure/chair/comfy/brown{dir = 4},/obj/effect/scrapping/objective_spawner/kill,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aM" = (/obj/structure/chair/comfy/brown{dir = 4},/obj/machinery/light/small{dir = 1},/obj/effect/mob_spawn/human/skeleton,/obj/effect/decal/cleanable/blood,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aN" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/table/reinforced,/obj/item/radio,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aO" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/scrapping/objective_spawner/heal,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aP" = (/obj/effect/decal/cleanable/blood{icon_state = "xfloor5"},/obj/effect/decal/cleanable/blood{icon_state = "xltrails_2"},/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"aQ" = (/obj/effect/decal/cleanable/blood/xtracks{icon_state = "xtracks"; dir = 9},/turf/open/floor/mineral/titanium,/area/template_noop)
+"aR" = (/obj/effect/decal/cleanable/blood/xtracks{icon_state = "xtracks"; dir = 6},/obj/effect/decal/cleanable/oil/streak,/turf/open/floor/mineral/titanium,/area/template_noop)
+"aS" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/food/pie_smudge,/obj/effect/mob_spawn/human/clown/corpse,/turf/open/floor/mineral/titanium,/area/template_noop)
+"aT" = (/obj/machinery/door/airlock/public/glass{name = "Emergency Shuttle Cockpit"; req_access_txt = "19"; welded = 1},/obj/machinery/door/firedoor,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aU" = (/obj/effect/decal/cleanable/dirt,/obj/item/storage/firstaid,/obj/effect/decal/cleanable/blood{icon_state = "splatter3"},/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aV" = (/obj/structure/chair/comfy/brown{dir = 4},/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aW" = (/obj/structure/window/reinforced{dir = 4},/obj/effect/scrapping/objective_spawner/item,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"aX" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/scrapping/objective_spawner/heal,/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"aY" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/machinery/light/small{dir = 1},/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"aZ" = (/obj/effect/decal/cleanable/blood{icon_state = "xgibdown1"},/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"ba" = (/obj/effect/decal/cleanable/blood/xtracks,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"bb" = (/obj/effect/decal/cleanable/blood/xtracks,/obj/effect/decal/cleanable/oil/streak{icon_state = "floor7"},/turf/open/floor/mineral/titanium,/area/template_noop)
+"bc" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"bd" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/blood,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"be" = (/obj/structure/chair/comfy/brown{dir = 4},/obj/effect/scrapping/objective_spawner/kill,/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/glass,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"bf" = (/obj/structure/chair/comfy/brown{dir = 4},/obj/machinery/light/small,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"bg" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"bh" = (/obj/effect/scrapping/objective_spawner/item,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"bi" = (/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"bj" = (/obj/machinery/door/airlock/public/glass{name = "Emergency Shuttle Brig"; req_access_txt = "2"},/obj/machinery/door/firedoor,/obj/effect/decal/cleanable/dirt,/obj/structure/barricade/wooden/crude,/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"bk" = (/obj/effect/decal/cleanable/dirt,/obj/effect/decal/cleanable/blood/gibs{icon_state = "xgibleg"},/turf/open/floor/mineral/titanium,/area/template_noop)
+"bl" = (/obj/effect/decal/cleanable/blood/xtracks{icon_state = "xtracks"; dir = 10},/obj/effect/decal/cleanable/oil,/turf/open/floor/mineral/titanium,/area/template_noop)
+"bm" = (/obj/machinery/light{dir = 1},/obj/effect/decal/cleanable/blood/xtracks{icon_state = "xtracks"; dir = 8},/obj/effect/decal/cleanable/oil/streak,/turf/open/floor/mineral/titanium,/area/template_noop)
+"bn" = (/obj/effect/decal/cleanable/blood/xtracks{icon_state = "xtracks"; dir = 6},/turf/open/floor/mineral/titanium,/area/template_noop)
+"bo" = (/obj/structure/grille/broken,/obj/effect/decal/cleanable/glass,/turf/open/floor/plating,/area/template_noop)
+"bp" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced,/obj/effect/decal/cleanable/glass,/turf/open/floor/mineral/titanium/yellow,/area/template_noop)
+"bq" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/mob_spawn/human/nanotrasensoldier,/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"br" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/plastitanium/red/brig,/area/template_noop)
+"bs" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/scrapping/objective_spawner/kill,/obj/effect/decal/cleanable/dirt,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"bt" = (/obj/structure/chair/comfy/shuttle{dir = 4},/obj/effect/decal/cleanable/dirt,/obj/effect/mob_spawn/human/corpse/assistant,/turf/open/floor/mineral/titanium/blue,/area/template_noop)
+"bu" = (/obj/structure/shuttle/engine/propulsion{dir = 4},/obj/structure/window/reinforced,/turf/open/floor/plating,/area/template_noop)
+"bv" = (/obj/structure/shuttle/engine/heater{dir = 8},/obj/structure/window/reinforced,/turf/open/floor/plating,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaabacadadaaaaadaeafadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaadadadagadadahadaiajadakahadadaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaalamanaoadapaqarasatauauaqavadahadaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaalamawaxayazaiaAasaBaCaCaDaqaEaFadahadaaaaaaaaaaaaaa
+aaaaaaaaaaaaalamanaGaHaIaqadasaBaJaCaCaKadaLaMaNahaaaaaaaaaaaaaa
+aaaaaaaaaaaaadadadadagaOaPaEaQaRaiaiasaSaTaUaVaWahaaaaaaaaaaaaaa
+aaaaaaaaaaaaalamaXaYaHaZbaadbbaibcaCbdaKaHbebfbgahaaaaaaaaaaaaaa
+aaaaaaaaaaaaalambhbibjbkblbmbnasaCaCaraqbobpadahadaaaaaaaaaaaaaa
+aaaaaaaaaaaaalambqbradbsaqaqaiasaObtaqavadahadaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaadadadagadadahadaiaiadahahadadaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaabubvadadaaaaadaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

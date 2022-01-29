@@ -1,0 +1,45 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/closed/wall,/turf/template_noop,/area/template_noop)
+"c" = (/turf/open/floor/plasteel,/turf/template_noop,/area/template_noop)
+"d" = (/turf/open/floor/plating,/obj/structure/window/reinforced/fulltile,/turf/template_noop,/area/template_noop)
+"e" = (/turf/open/floor/plasteel,/obj/effect/scrapping/objective_spawner/heal,/turf/template_noop,/area/template_noop)
+"f" = (/turf/open/floor/plasteel,/obj/effect/scrapping/objective_spawner/survivor,/turf/template_noop,/area/template_noop)
+"g" = (/turf/open/floor/plasteel,/obj/effect/scrapping/objective_spawner/item,/turf/template_noop,/area/template_noop)
+"h" = (/turf/open/floor/plasteel,/obj/effect/scrapping/objective_spawner/kill,/turf/template_noop,/area/template_noop)
+"i" = (/turf/open/floor/plasteel,/obj/effect/mob_spawn/human/clown,/turf/template_noop,/area/template_noop)
+"j" = (/turf/open/floor/plasteel,/obj/effect/mob_spawn/human/clown/corpse,/turf/template_noop,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaabcbaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaadcdaaaaaaaaaaaaaaa
+aaaaaaaaaddbbbbcbbbaaaaaaaaaaaaa
+aaaaaaaaddeebfccccbaaaaaaaaaaaaa
+aaaaaaaadgccccccccbaaaaaaaaaaaaa
+aaaaaaaadgccccccccbaaaaaaaaaaaaa
+aaaaaaaaddhhbijcccbaaaaaaaaaaaaa
+aaaaaaaaaddbbbbcbbbaaaaaaaaaaaaa
+aaaaaaaaaaaaaadcdaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaabcbaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}
