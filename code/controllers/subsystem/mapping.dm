@@ -16,6 +16,7 @@ SUBSYSTEM_DEF(mapping)
 	var/list/ruins_templates = list()
 	var/list/space_ruins_templates = list()
 	var/list/lava_ruins_templates = list()
+	var/list/scrap_templates = list()
 	var/datum/space_level/isolated_ruins_z //Created on demand during ruin loading.
 
 	var/list/shuttle_templates = list()
@@ -168,6 +169,7 @@ SUBSYSTEM_DEF(mapping)
 	ruins_templates = SSmapping.ruins_templates
 	space_ruins_templates = SSmapping.space_ruins_templates
 	lava_ruins_templates = SSmapping.lava_ruins_templates
+	scrap_templates = SSmapping.scrap_templates
 	shuttle_templates = SSmapping.shuttle_templates
 	random_room_templates = SSmapping.random_room_templates
 	shelter_templates = SSmapping.shelter_templates
@@ -404,6 +406,23 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 			lava_ruins_templates[R.name] = R
 		else if(istype(R, /datum/map_template/ruin/space))
 			space_ruins_templates[R.name] = R
+
+/datum/controller/subsystem/mapping/proc/preloadScrapTemplates()
+	var/list/banned = generateMapList("scrapshuttleblacklist.txt")
+
+	for(var/item in sortList(subtypesof(/datum/map_template/scrap_shuttles), /proc/cmp_ruincost_priority))
+		var/datum/map_template/scrap_shuttles/shuttle_type = item
+		// screen out the abstract subtypes
+		if(!initial(shuttle_type.id))
+			continue
+
+		var/datum/map_template/scrap_shuttles/S = new shuttle_type()
+
+		if(banned.Find(S.mappath))
+			continue
+
+		map_templates[S.name] = S
+		scrap_templates[S.name] = S
 
 /datum/controller/subsystem/mapping/proc/preloadShuttleTemplates()
 	var/list/unbuyable = generateMapList("shuttles_unbuyable.txt")

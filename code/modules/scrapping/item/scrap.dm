@@ -17,7 +17,7 @@
 
 /obj/item/stack/ore/plasma/scrap
 	name = "plasma scrap"
-	desc = "Twisted scrap, useless in its current state, but it can be melted back into sheets."
+	desc = "Broken shards, useless in its current state, but it can be melted back into sheets."
 	icon = 'icons/obj/scrapping/scrap.dmi'
 	icon_state = "scrap_plasma"
 	item_state = "scrap_plasma"

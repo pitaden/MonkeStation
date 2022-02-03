@@ -1,9 +1,8 @@
 // datums for each ship's info
 
 /datum/map_template/scrap_shuttles
-	var/prefix = "_maps/scrap_shuttles/"
+	mappath = "_maps/scrap_shuttles/debug.dmm"
 	var/id = "scrap_debug"
-	var/suffix = "debug.dmm"
 	var/description = "Who needs mining, anyways?"
 
 	var/value = 5000
@@ -38,9 +37,18 @@
 	)
 
 
+/datum/map_template/scrap_shuttles/proc/check_zone(turf/start_loc)
+	var/affected = get_affected_turfs(start_loc, centered=FALSE)
+	for(var/turf/T in affected)
+		// we don't want to destroy players, so lets make sure no mobs inside are players
+		for(var/mob/M in T)
+			if(!M.ckey == null || !M.key == null)
+				return FALSE
+	return TRUE
+
 /datum/map_template/scrap_shuttles/goon
 	id = "scrap_goon"
-	suffix = "emergency_goon.dmm"
+	mappath = "_maps/scrap_shuttles/emergency_goon.dmm"
 
 	class_name = "Goon"
 	pre_list = list(
