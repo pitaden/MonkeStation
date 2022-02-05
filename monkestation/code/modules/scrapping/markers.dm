@@ -3,7 +3,7 @@
 /obj/effect/scrapping
 	name = "Uh oh"
 	desc = "Yell at pitaden!"
-	icon = 'icons/obj/scrapping/mapping.dmi'
+	icon = 'monkestation/icons/obj/scrapping/mapping.dmi'
 	icon_state = ""
 
 
@@ -11,15 +11,20 @@
 	name = "Generic Objective"
 
 
+/obj/effect/scrapping/objective_spawner/Initialize()
+	qdel(src)
+
+
 /obj/effect/scrapping/objective_spawner/kill
 	// where to create a mob for you to beat up
 	name = "Kill Objective"
 	icon_state = "objective_kill"
-	// mob = weight
+	// list( mob = weight )
 	var/possible_mobs = list(
 		/mob/living/simple_animal/hostile/hivebot = 15,
 		/mob/living/simple_animal/hostile/hivebot/strong = 1
 	)
+
 
 /obj/effect/scrapping/objective_spawner/heal
 	// where to create a wounded/dead human that you have to heal

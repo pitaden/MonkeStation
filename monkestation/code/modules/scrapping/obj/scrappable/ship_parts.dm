@@ -1,9 +1,11 @@
 // scrappables unique to ships
 
+/obj/scrappable/ship
+	icon = 'monkestation/icons/obj/scrapping/objects.dmi'
+
 /obj/scrappable/ship/laser
 	name = "Ship Laser"
 	desc = "A broken ship-mounted laser cannon."
-	icon = 'icons/obj/scrapping/objects.dmi'
 	icon_state = "laser_placeholder"
 
 	required_tools = list(
@@ -24,7 +26,6 @@
 /obj/scrappable/ship/ballistic
 	name = "Ship Railgun"
 	desc = "A broken ship-mounted railgun."
-	icon = 'icons/obj/scrapping/objects.dmi'
 	icon_state = "ballistic_placeholder"
 
 	required_tools = list(
@@ -45,7 +46,6 @@
 /obj/scrappable/ship/missile
 	name = "Ship Missile Launcher"
 	desc = "A broken ship-mounted missile launcher."
-	icon = 'icons/obj/scrapping/objects.dmi'
 	icon_state = "missile_placeholder"
 
 	required_tools = list(
@@ -66,7 +66,6 @@
 /obj/scrappable/ship/reactor
 	name = "Nuclear Reactor"
 	desc = "A reactor built to power a ship. Right now, this one isn't powering anything."
-	icon = 'icons/obj/scrapping/objects.dmi'
 	icon_state = "reactor_placeholder"
 
 	required_tools = list(
