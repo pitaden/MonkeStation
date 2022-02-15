@@ -12,3 +12,4 @@
 	held_lh = 'monkestation/icons/mob/pets_held_lh.dmi'//icons for holding mobs
 	held_rh = 'monkestation/icons/mob/pets_held_rh.dmi'
 	held_state = "honk_fly"
+
