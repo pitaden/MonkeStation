@@ -110,10 +110,10 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 	if(head)
 		if(H.dna.species.id == SPECIES_PLASMAMAN) // we REALLY don't want to delete plasmamen's helmets
 			H.equip_to_slot_or_del(new head(H),ITEM_SLOT_BACKPACK, TRUE) // also don't want to just delete the new hat, so we put the hat in their backpack instead
-		else:
+		else
 			if(H.head)
 				qdel(H.head)
-			H.equip_or_collect(new head(H),ITEM_SLOT_HEAD)
+			H.equip_to_slot_or_del(new head(H),ITEM_SLOT_HEAD)
 	//monkestation edit end
 	var/obj/item/card/id/W = H.wear_id
 	W.access |= dep_access
