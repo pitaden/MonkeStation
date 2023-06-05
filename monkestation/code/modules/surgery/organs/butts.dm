@@ -12,7 +12,25 @@
 	hitsound = 'sound/misc/fart1.ogg'
 	body_parts_covered = HEAD
 	slot_flags = ITEM_SLOT_HEAD
-	var/list/sound_effect  = list('sound/misc/fart1.ogg', 'monkestation/sound/effects/fart2.ogg', 'monkestation/sound/effects/fart3.ogg', 'monkestation/sound/effects/fart4.ogg')
+	var/list/sound_effect  = list(
+		'sound/misc/fart1.ogg',
+		'monkestation/sound/effects/fart2.ogg',
+		'monkestation/sound/effects/fart3.ogg',
+		'monkestation/sound/effects/fart4.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart01.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart02.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart03.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart04.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart07.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart08.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart09.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart10.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart11.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart12.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart13.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart14.ogg',
+		'monkestation/sound/effects/sord_farts/sordfart15.ogg'
+		)
 	var/atmos_gas = "miasma=0.25;TEMP=310.15" //310.15 is body temperature
 	var/fart_instability = 1 //Percent chance to lose your rear each fart.
 	var/cooling_down = FALSE
